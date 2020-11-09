@@ -230,6 +230,7 @@ body{
 	justify-content: center;
 	background: url('../images/home_txtbg.png')no-repeat center/cover;
 	margin-top: 70px;
+	-webkit-animation: sign_txtbg .5s forwards;
 	animation: sign_txtbg .5s forwards;
 }
 .sign_txt::before{
@@ -240,10 +241,17 @@ body{
 	top: -45px;
 	left: 100px;
 	background: url('../images/home_txt.png')no-repeat center/contain;
-	opacity: 0;
-	animation: sign_txt .7s forwards .5s;
+	opacity: 0;	
+	animation: sign_txt_animate .7s forwards .5s;
 }
-
+@keyframes sign_txt_animate {
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
 .sign_txt ul{
 	opacity: 0;
 	line-height: 25px;
@@ -291,6 +299,21 @@ body{
 	display: flex;
 	flex-direction: column;
 }
+.banner_btn{
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	background: url('../images/icon_prev.svg')no-repeat center/cover;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+}
+.banner_btn.next{
+	background-image: url('../images/icon_next.svg');
+	right: 0;
+}
+
+
 .banner_bigtxt{
 	font-size: 38px;
 	font-weight: 900;
@@ -1670,8 +1693,16 @@ footer{
 	.sign{
 		min-height: 500px;
 	}
+	.sign_info{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		left: 0;
+		top: 20%;
+	}
 	.sign_txt{
-		margin-top: 60px;
+		margin: 60px auto 0;
 		animation: sign_txtbg_pad .5s forwards;
 	}
 	.sign_txt::before{
@@ -1687,14 +1718,6 @@ footer{
 	}
 	.sign_txt li.title{
 		font-size: 14px;
-	}
-	.sign_info{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
-		left: 0;
-		top: 20%;
 	}
 	.sign_info .mod_midtxt{
 		padding-left: 0;
@@ -2278,22 +2301,5 @@ screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
 		height: 120px;
 	}
 }
-@keyframes sign_txt {
-	0%{
-		opacity: 0;
-	}
-	100%{
-		opacity: 1;
-	}
-}
 
-/* @keyframes sign_txtbg_ph{
-	0%{
-		width: 0;
-		height: 0;
-	}
-	100%{
-		width: 300px;
-		height: 150px;
-	}
-} */
+
