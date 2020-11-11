@@ -36,7 +36,7 @@
         -webkit-transform: translate3d(-50%, 0, 0);
         transform: translate3d(-50%, 0, 0);
     }
-  }
+}
 /* 霧飄 */
 
 
@@ -180,7 +180,7 @@
     height: 5px;
     border-radius: 50%;
 	background-color: #dffafe;
-	box-shadow: 0px 0px 2px 1px rgba(7, 135, 227,0.6), 0px 0px 4px 3px rgba(7, 135, 227,0.4);
+	box-shadow: 0px 0px 2px 1px rgba(255, 255, 188,0.6), 0px 0px 4px 3px rgba(255, 255, 188,0.4);
     opacity: 0;
 }
 .bg_bubbles_in_out li:nth-child(1) {
@@ -372,7 +372,7 @@
         opacity: 0.1;
     }
     50%{
-        opacity: 1;
+        opacity: 0.7;
     }
     100% {
         -webkit-transform: translate(-800px , -100px)  scale(1.5);
@@ -385,7 +385,7 @@
         opacity: 0.1;
     }
     50%{
-        opacity: 1;
+        opacity: 0.7;
     }
     100% {
         -webkit-transform: translate(-800px , -100px)  scale(1.5);
@@ -398,7 +398,7 @@
         opacity: 0.1;
     }
     50%{
-        opacity: 1;
+        opacity: 0.7;
     }
     100% {
         -webkit-transform: translate(1000px , -200px) scale(1.2) ;
@@ -411,7 +411,7 @@
         opacity: 0.1;
     }
     50%{
-        opacity: 1;
+        opacity: 0.7;
     }
     100% {
         -webkit-transform: translate(1000px , -200px) scale(1.2) ;
@@ -425,7 +425,7 @@
         opacity: 0.1;
     }
     50%{
-        opacity: 1;
+        opacity: 0.7;
     }
     100% {
         -webkit-transform: translate(-800px , -300px)  scale(1.9);
@@ -439,7 +439,7 @@
         opacity: 0.1;
     }
     50%{
-        opacity: 1;
+        opacity: 0.7;
     }
     100% {
         -webkit-transform: translate(-800px , -300px)  scale(1.9);
@@ -452,7 +452,7 @@
         opacity: 0.1;
     }
     50%{
-        opacity: 1;
+        opacity: 0.7;
     }
     100% {
         -webkit-transform: translate(1000px , -200px) scale(1.2) ;
@@ -465,7 +465,7 @@
         opacity: 0.1;
     }
     50%{
-        opacity: 1;
+        opacity: 0.7;
     }
     100% {
         -webkit-transform: translate(1000px , -200px) scale(1.2) ;
@@ -478,7 +478,7 @@
         opacity: 0.1;
     }
     50%{
-        opacity: 1;
+        opacity: 0.7;
     }
     100% {
         -webkit-transform: translate(-800px , 200px)  scale(1.5);
@@ -491,7 +491,7 @@
         opacity: 0.1;
     }
     50%{
-        opacity: 1;
+        opacity: 0.7;
     }
     100% {
         -webkit-transform: translate(-800px , 200px)  scale(1.5);
@@ -504,7 +504,7 @@
         opacity: 0.1;
     }
     50%{
-        opacity: 1;
+        opacity: 0.7;
     }
     100% {
         -webkit-transform: translate(800px , 200px)  scale(1.8);
@@ -517,7 +517,7 @@
         opacity: 0.1;
     }
     50%{
-        opacity: 1;
+        opacity: 0.7;
     }
     100% {
         -webkit-transform: translate(800px , 200px)  scale(1.8);
