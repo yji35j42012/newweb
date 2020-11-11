@@ -126,6 +126,7 @@ body{
 .menu>li:last-child {
 	padding: 0 18px 0 38px;
 }
+.menu a{width: 100%; height: 100%;}
 .lang_txtbox tt{position: relative;}
 .lang_txtbox tt::before{
 	content:'';
@@ -196,10 +197,29 @@ body{
 	position: relative;
 	width: 100%;
 	min-height: 700px;
-	padding-bottom: calc(80% * 0.56);
+	padding-bottom: calc(100% * 0.56);
 	background: url('../images/home1.jpg')no-repeat center/cover;
+	opacity: 0;
+	animation: sign_bg 1.5s forwards;
+}
+@keyframes sign_bg{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
 }
 
+/* .sign::before{
+	content:'';
+	display: block;
+	position: absolute;
+	width: 100%;
+	padding-bottom: calc(80% * 0.56);
+	bottom: -20px;
+	background: url('../images/home_bot.png')no-repeat center bottom / contain;
+} */
 .sign_info {
 	position: absolute;
 	top: 25%;
@@ -210,7 +230,7 @@ body{
 	padding-left: 50px;
 	transform: translateX(-10%);
 	opacity: 0;
-	animation: sign_info .5s forwards;
+	animation: sign_info .5s forwards 2s;
 }
 @keyframes sign_info{
 	0%{
@@ -225,14 +245,14 @@ body{
 .sign_txt{
 	position: relative;
 	width: 0px;
-	height: 0;
+	height: 0px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background: url('../images/home_txtbg.png')no-repeat center/cover;
 	margin-top: 70px;
-	-webkit-animation: sign_txtbg .5s forwards;
-	animation: sign_txtbg .5s forwards;
+	-webkit-animation: sign_txtbg .5s forwards 2s;
+	animation: sign_txtbg .5s forwards 2s;
 }
 .sign_txt::before{
 	content:'';
@@ -243,7 +263,7 @@ body{
 	left: 100px;
 	background: url('../images/home_txt.png')no-repeat center/contain;
 	opacity: 0;	
-	animation: sign_txt_animate .7s forwards .5s;
+	animation: sign_txt_animate .7s forwards 2.5s;
 }
 @keyframes sign_txt_animate {
 	0%{
@@ -257,7 +277,8 @@ body{
 	opacity: 0;
 	line-height: 25px;
 	transform: translateX(-10%);
-	animation: sign_ul .7s forwards .5s;
+	overflow: hidden;
+	animation: sign_ul .7s forwards 2.5s;
 }
 @keyframes sign_ul{
 	0%{
@@ -294,7 +315,6 @@ body{
 .banner {
 	position: relative;
 	width: 100%;
-	padding-top: 60px;
 	background: #fff;
 	overflow: hidden;
 	display: flex;
@@ -329,7 +349,7 @@ body{
 }
 .banner_minitxt{
 	position: relative;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 30px;
 }
 .banner_group{
@@ -852,6 +872,11 @@ img.icon_poker4{
 	position: relative;
 	padding: 60px 150px 50px ;
 	background: #fff;
+	min-height: 600px;
+}
+.service .mod_minitxt{
+	line-height: 26px;
+	margin-top: 20px;
 }
 .service_pic{
 	content:'';
@@ -863,6 +888,32 @@ img.icon_poker4{
 	bottom: 0;
 	margin: auto 0;
 	right: 0;
+	overflow: hidden;
+}
+.service_pic::after{
+	content:'';
+	width: 100%;
+	height: 100%;
+	background: url('../images/service_pic_light.png')no-repeat right center/contain;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	right: 0;
+	opacity: 0;
+	animation: service_pic_light 2s infinite;
+	
+}
+@keyframes service_pic_light {
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
 }
 
 .txt_box{
@@ -881,12 +932,19 @@ img.icon_poker4{
 	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(176,176,176,1) 100%);
 	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(176,176,176,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b0b0b0',GradientType=0 );
-	border:1px solid #0787e3;
+	/* border:1px solid #0787e3; */
 }
 .sp_btn_box .sp_btn:nth-child(2){
-	background: #000;
-	border: 1px solid #fff;
+	color: #fff;
+	/* background: rgb(255,255,255);
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(176,176,176,1) 100%);
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(176,176,176,1) 100%); */
+	background: linear-gradient(to bottom,  #001829 0%,#03000f 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b0b0b0',GradientType=0 );
+	/* border:1px solid #0787e3; */
+	/* border: 1px solid rgba(176,176,176,1); */
 }
+
 .sp_btn{
 	position: relative;
 	width: 200px;
@@ -899,6 +957,16 @@ img.icon_poker4{
 	border-radius: 3px;
 	padding: 13px 20px ;
 	transition-duration: .3s;
+
+	box-shadow:  0 0 2px #000;
+	/* box-shadow: 0px 1px 3px #000,
+	0px -1px 3px #000,
+	1px 0px 3px #000,
+	-1px 0px 3px #000; */
+	/* box-shadow: 0px 1px 0 #999,
+	0px -1px 0 #999,
+	1px 0px 0 #999,
+	-1px 0px 0 #999; */
 }
 .sp_btn+.sp_btn{margin-left: 20px;}
 .icon_btn{
@@ -1099,25 +1167,30 @@ img.icon_poker4{
 .recruit_r{
 	position: relative;
 	width: 30%;
+	height: 400px;
 	background: rgba(0,0,0,.9);
 	overflow: hidden;
 }
 .recruit_group{
 	display: flex;
-	min-height: 310px;
-	max-height: 325px;
+	height: 100%;
+	flex-direction: column;
+	transition-duration: .3s;
 }
 .recruit_item {
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
-	padding: 50px 70px 90px;
+	padding: 0 70px;
 	width: 100%;
-	text-align: center;
+	height: 100%;
+	display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 	flex: none;
 	background: url('../images/recruit_pic1.jpg')no-repeat center/cover;
 	transition-duration: 1s;
-	opacity: 0;
 }
 .recruit_item:nth-child(2){
 	background-image: url('../images/recruit_pic2.jpg');
@@ -1127,8 +1200,7 @@ img.icon_poker4{
 }
 
 .recruit_item.active{
-	position: relative;
-	opacity: 1;
+
 }
 
 .recruit_item::before{
@@ -1391,8 +1463,21 @@ footer{
 	top: 0;
 	left: 0;
 	z-index: 11;
-	overflow-x: hidden;
-	overflow-y: auto;
+	overflow: hidden;
+}
+.circle_mask{
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	overflow: hidden;
+	opacity: 0;
+	transition-duration: 1s;
+}
+.active .circle_mask{
+	width: 120vw;
+	height: 120vw;
+	opacity: 1;
 }
 .loading{
 	width: 100%;
@@ -1404,21 +1489,8 @@ footer{
 	flex-direction: column;
 }
 .load{ background: transparent;}
-.load .loading{
-	position: absolute;
-	border-radius: 50%;
-	width: 0;
-	height: 0;
-	opacity: 0;
-	transition-duration: 1s;
-	overflow: hidden;
-}
-.load.active .loading{
-	opacity: 1;
-	width: 100%;
-	height: 100%;
-	border-radius: 0;
-}
+
+
 
 .loading .logo{
 	width: 200px;
@@ -1709,7 +1781,9 @@ footer{
 	.sign_txt li.title{
 		font-size: 20px;
 	}
-
+	.service{
+		min-height: auto;
+	}
 	.partner{
 		padding:80px 100px 0;
 	}
@@ -1796,7 +1870,7 @@ footer{
 	}
 	.sign_txt{
 		margin: 60px auto 0;
-		animation: sign_txtbg_pad .5s forwards;
+		animation: sign_txtbg_pad .5s forwards 2s;
 	}
 	.sign_txt::before{
 		width: 100px;
@@ -2152,9 +2226,8 @@ footer{
 	.contact{
 		padding: 65px 0 20px;
 	}
-	.recruit_l{
-		min-height: 310px;
-	}
+
+
 	.recruit_l .mod_bigtxt{
 		font-size: 45px;
 	}
@@ -2165,6 +2238,7 @@ footer{
 	.recruit_l,
 	.recruit_r{
 		width: 100%;
+		height: 300px;
 	}
 	.recruit_item{
 		padding: 30px 100px;

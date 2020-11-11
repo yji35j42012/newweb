@@ -179,7 +179,7 @@
     width: 5px;
     height: 5px;
     border-radius: 50%;
-	background-color: #dffafe;
+	background-color: #fddd60;
 	box-shadow: 0px 0px 2px 1px rgba(255, 255, 188,0.6), 0px 0px 4px 3px rgba(255, 255, 188,0.4);
     opacity: 0;
 }
@@ -1162,3 +1162,153 @@
 /*  */
 
 
+/* 流星動畫 */
+
+.night {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 25%;
+    transform: rotateZ(135deg);
+}
+.shooting_star {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 2px;
+    background: linear-gradient(
+      -45deg,
+      rgba(227, 223, 186, 1),
+      rgba(0, 0, 255, 0)
+    );
+    border-radius: 999px;
+    animation: tail 3000ms ease-in-out infinite,
+      shooting 3000ms ease-in-out infinite;
+}
+.shooting_star::before ,
+.shooting_star::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+        -45deg,
+        rgba(0, 0, 255, 0),
+        rgba(227, 223, 186, 1),
+        rgba(0, 0, 255, 0)
+    );
+    border-radius: 100%;
+    animation: shining 3000ms ease-in-out infinite;
+}
+.shooting_star::before {
+    transform: translateX(50%) rotateZ(45deg);
+}
+.shooting_star::after {
+    transform: translateX(50%) rotateZ(-45deg);
+}
+.shooting_star:nth-child(2) {
+    top: calc(50% - -97px);
+    left: calc(50% - 54px);
+    -webkit-animation-delay: 4118ms;
+    animation-delay: 4118ms;
+}
+.shooting_star:nth-child(2)::before,
+.shooting_star:nth-child(2)::after {
+    -webkit-animation-delay: 4118ms;
+    animation-delay: 4118ms;
+}
+  
+.shooting_star:nth-child(3) {
+    top: calc(50% - 15px);
+    left: calc(50% - 13px);
+    -webkit-animation-delay: 5554ms;
+    animation-delay: 5554ms;
+}
+.shooting_star:nth-child(3)::before,
+.shooting_star:nth-child(3)::after {
+    -webkit-animation-delay: 5554ms;
+    animation-delay: 5554ms;
+}
+  
+.shooting_star:nth-child(4) {
+    top: calc(50% - -94px);
+    left: calc(50% - 160px);
+    -webkit-animation-delay: 838ms;
+    animation-delay: 838ms;
+}
+.shooting_star:nth-child(4)::before,
+.shooting_star:nth-child(4)::after {
+    -webkit-animation-delay: 838ms;
+    animation-delay: 838ms;
+}
+.shooting_star:nth-child(5) {
+    top: calc(50% - -21px);
+    left: calc(50% - 216px);
+    -webkit-animation-delay: 4368ms;
+    animation-delay: 4368ms;
+}
+.shooting_star:nth-child(5)::before,
+.shooting_star:nth-child(5)::after {
+    -webkit-animation-delay: 4368ms;
+    animation-delay: 838ms;
+}
+.shooting_star:nth-child(6) {
+    top: calc(50% - 80px);
+    left: calc(50% - 200px);
+    -webkit-animation-delay: 3816ms;
+    animation-delay: 4368ms;
+}
+.shooting_star:nth-child(6)::before,
+.shooting_star:nth-child(6)::after {
+    -webkit-animation-delay:3816ms;
+    animation-delay: 838ms;
+}
+  
+
+
+
+
+@keyframes tail {
+    0% {
+        width: 0;
+    }
+    30% {
+        width: 100px;
+    }
+    100% {
+        width: 0;
+    }
+}
+  
+@keyframes shining {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 30px;
+    }
+    100% {
+        width: 0;
+    }
+}
+  
+@keyframes shooting {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(300px);
+    }
+}
+  
+@keyframes sky {
+    0% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(45 + 360deg);
+    }
+}
+  
+/* 流星動畫 */
