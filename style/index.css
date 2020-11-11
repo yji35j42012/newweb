@@ -2192,9 +2192,8 @@ footer{
 }
 @media (max-width: 576px){
 
-	.banner_txtbox{
-		padding: 0 15px;
-	}
+	.banner_txtbox,
+	.banner_item1 .banner_txtbox,
 	.banner_item4 .banner_txtbox{
 		padding: 0 15px;
 	}
@@ -2296,6 +2295,7 @@ footer{
 }
 
 @media (max-width: 360px){
+	.banner_item1 .banner_bigtxt,
 	.banner_item2 .banner_bigtxt{
 		font-size: 34px;
 	}
