@@ -995,6 +995,7 @@ img.icon_poker4{
 	padding: 60px 150px 0;
 	overflow: hidden;
 	background: url('../images/bg_SP.jpg')no-repeat center top / cover;
+	-webkit-user-select: none;
 }
 .partner .mod_midtxt{
 	color: #fff;
