@@ -3,6 +3,7 @@ body{
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
+	-webkit-user-select: none;
 }
 
 /* share use start*/
