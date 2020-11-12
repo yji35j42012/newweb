@@ -935,42 +935,36 @@ img.icon_poker4{
 }
 .sp_btn_box{
 	display: flex;
-	margin-top:150px;
+	margin-top:70px;
 }
-.sp_btn_box .sp_btn:nth-child(1){
+.game_btn {
 	color: #000;
 	background: rgb(255,255,255);
 	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(176,176,176,1) 100%);
 	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(176,176,176,1) 100%);
 	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(176,176,176,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b0b0b0',GradientType=0 );
 }
-.sp_btn_box .sp_btn:nth-child(2){
-	background: #000;
-	border: 1px solid #0787E3;
+.businese_btn{
+	color: #fff;
+	background: #03000f;
+	background: -moz-linear-gradient(to bottom,  #001829 0%,#03000f 100%);
+	background: -webkit-linear-gradient(to bottom,  #001829 0%,#03000f 100%);
+	background: linear-gradient(to bottom,  #001829 0%,#03000f 100%);
 }
+
 .sp_btn{
 	position: relative;
 	width: 200px;
 	height: 100px;
-	color:#fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
 	font-size: 12px;
 	border-radius: 3px;
 	padding: 13px 20px ;
-	z-index: 2;
 	transition-duration: .3s;
+	box-shadow:  0 0 2px #000;
 }
-.ttt{
-	color: #fff;
-	background: #000;
-	width: 100px;
-	height: 100px;
-}
-
 .sp_btn+.sp_btn{margin-left: 20px;}
 .icon_btn{
 	display: inline-block;
@@ -2269,7 +2263,6 @@ footer{
 		height: 200px;
 		
 	}
-
 }
 @media (max-width: 576px){
 
@@ -2407,9 +2400,7 @@ footer{
 @media (pointer: fine),
 (pointer: fine) and (-moz-touch-enabled: 0),
 screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
-	.ttt:hover{
-		background: #f00;
-	}
+
 	.banner_dots li:not(.on):hover{
 		background: #fff;
 		box-shadow: 0px 0px 2px 1px rgba(7, 135, 227,0.6),
@@ -2421,7 +2412,7 @@ screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
 					inset 0px 0px 2px 1px rgba(7, 135, 227,0.6),
 					inset 0px 0px 4px 3px rgba(7, 135, 227,0.4);
 	}
-	.businese_btn:hover{
+	.sp_btn:nth-child(2):hover{
 		box-shadow: 0px 0px 2px 1px rgba(255, 255, 255,0.6),
 		0px 0px 6px 2px rgba(255, 255, 255,0.4),
 		inset 0px 0px 2px 1px rgba(255, 255, 255,0.6),
@@ -2472,6 +2463,7 @@ screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
 				0px 0px 6px 2px rgba(255, 255, 255,0.4),
 				inset 0px 0px 2px 1px rgba(255, 255, 255,0.6),
 				inset 0px 0px 6px 2px rgba(255, 255, 255,0.4);
+	/* border:1px solid white; */
 }
 
 .menu > li:active:after{
@@ -2504,6 +2496,3 @@ screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
 	background-size: 60%;
 }
 
-.ttt:active{
-	background: #f00;
-}
