@@ -760,7 +760,7 @@ img.icon_poker4{
 	position: relative;
 	display: flex;
 	width: 100%;
-	padding: 30px;
+	padding: 60px 30px;
 	align-items: center;
 	overflow: hidden;
 }
@@ -964,6 +964,7 @@ img.icon_poker4{
 	padding: 13px 20px ;
 	transition-duration: .3s;
 	box-shadow:  0 0 2px #000;
+	-webkit-user-select: none;
 }
 .sp_btn+.sp_btn{margin-left: 20px;}
 .icon_btn{
