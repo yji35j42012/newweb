@@ -1846,7 +1846,7 @@ footer{
 	}
 	.sp_pic{height: 330px;}
 	.service{
-		padding: 60px 50px 50px;
+		padding: 60px 50px 250px;
 	}
 	.txt_box::before{width: 150px; right: 96%;}
 	.txt_box::after{
