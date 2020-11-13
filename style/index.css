@@ -1,5 +1,4 @@
 body{
-	/* background: #000; */
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
@@ -25,9 +24,7 @@ body{
 }
 .txt_shadow{text-shadow: 1px 0px #000, 1px 1px 1px #000;}
 [class*="_btn"]:not(:disabled),
-.second_menu li{
-	cursor: pointer;
-}
+.second_menu li{cursor: pointer;}
 /* 漸層 */
 .gradient {
 	position: relative;
@@ -201,9 +198,9 @@ body{
 	min-height: 700px;
 	padding-bottom: calc(100% * 0.52);
 	background: url('../images/home1.jpg')no-repeat center/cover;
-	opacity: 0;
 	animation: sign_bg 1.5s forwards;
 	overflow: hidden;
+	animation-play-state: paused;
 }
 @keyframes sign_bg{
 	0%{
@@ -225,6 +222,7 @@ body{
 	transform: translateX(-10%);
 	opacity: 0;
 	animation: sign_info .5s forwards 2s;
+	animation-play-state: paused;
 }
 @keyframes sign_info{
 	0%{
@@ -248,6 +246,7 @@ body{
 	margin-top: 70px;
 	-webkit-animation: sign_txtbg 1.5s forwards 2s;
 	animation: sign_txtbg 1.5s forwards 2s;
+	animation-play-state: paused;
 }
 @keyframes sign_txtbg{
 	0%{
@@ -266,6 +265,7 @@ body{
 	left: 100px;
 	background: url('../images/home_txt.png')no-repeat center/contain;
 	animation: sign_txt_animate .7s both 2.5s;
+	animation-play-state: paused;
 }
 @keyframes sign_txt_animate {
 	0%{
@@ -281,6 +281,7 @@ body{
 	line-height: 25px;
 	transform: translateX(-10%);
 	animation: sign_ul .7s forwards 2.5s;
+	animation-play-state: paused;
 }
 @keyframes sign_ul{
 	0%{
@@ -292,6 +293,14 @@ body{
 		transform: translateX(0%);
 	}
 }
+.active.sign,
+.active .sign_info .mod_midtxt,
+.active .sign_txt,
+.active .sign_txt::before,
+.active .sign_txt ul{
+	animation-play-state:running;
+}
+
 .sign_txt li:not(.title){
 	position: relative;
 	font-size: 18px;
@@ -371,46 +380,46 @@ body{
 .banner_txtbox{
 	width: 45%;
 }
-.banner_item2{
+.banner_item1{
 	padding: 0 80px 40px 0;
 }
-.banner_item1 .banner_bigtxt,
-.banner_item2 .banner_bigtxt ,
-.banner_item3 .banner_bigtxt{
+.banner_item4 .banner_bigtxt,
+.banner_item1 .banner_bigtxt ,
+.banner_item2 .banner_bigtxt{
 	opacity: 0;
 	transform: translateY(-20px);
 	transition: all 300ms cubic-bezier(0.55, 0, 0.42, 1);
 }
+.active.banner_item4 .banner_bigtxt,
 .active.banner_item1 .banner_bigtxt,
-.active.banner_item2 .banner_bigtxt,
-.active.banner_item3 .banner_bigtxt {
+.active.banner_item2 .banner_bigtxt {
 	opacity: 1;
 	transform: translateY(0);
 }
+.banner_item4 .banner_midtxt,
 .banner_item1 .banner_midtxt,
-.banner_item2 .banner_midtxt,
-.banner_item3 .banner_midtxt {
+.banner_item2 .banner_midtxt {
 	opacity: 0;
 	transform: translateY(-20px);
 	transition: all 300ms cubic-bezier(0.55, 0, 0.42, 1);
 }
+.active.banner_item4 .banner_midtxt,
 .active.banner_item1 .banner_midtxt,
-.active.banner_item2 .banner_midtxt,
-.active.banner_item3 .banner_midtxt{
+.active.banner_item2 .banner_midtxt{
 	opacity: 1;
 	transform: translateY(0);
 }
 
-.banner_item1 .banner_minitxt,
-.banner_item2 .banner_minitxt ,
-.banner_item3 .banner_minitxt {
+.banner_item4 .banner_minitxt,
+.banner_item1 .banner_minitxt ,
+.banner_item2 .banner_minitxt {
 	opacity: 0;
 	transform: translateY(-20px);
 	transition: all 300ms cubic-bezier(0.55, 0, 0.42, 1);
 }
+.active.banner_item4 .banner_minitxt,
 .active.banner_item1 .banner_minitxt,
-.active.banner_item2 .banner_minitxt,
-.active.banner_item3 .banner_minitxt {
+.active.banner_item2 .banner_minitxt {
 	opacity: 1;
 	transform: translateY(0);
 }
@@ -429,10 +438,10 @@ body{
 	margin: auto 0;
 }
 
-.banner_item1 .banner_pic{
+.banner_item4 .banner_pic{
 	background: url('../images/bg_banner01.png')no-repeat 0px 80px/ cover;
 }
-.banner_item1 .banner_pic:after{
+.banner_item4 .banner_pic:after{
 	content:'';
 	width: 100%;
 	height: 100%;
@@ -450,7 +459,7 @@ img.pic_peopel1{
 .bg_banner02{
 	height: auto;
 }
-.active.banner_item1 .pic_peopel1{
+.active.banner_item4 .pic_peopel1{
 	opacity: 1;
 	top: 20%;
 }
@@ -461,7 +470,7 @@ img.pic_peopel2{
 	opacity: 0;
 	transition: all 500ms cubic-bezier(0.55, 0, 0.42, 1) .5s;
 }
-.active.banner_item1 .pic_peopel2{
+.active.banner_item4 .pic_peopel2{
 	opacity: 1;
 	right: 50%;
 }
@@ -472,7 +481,7 @@ img.pic_peopel3{
 	opacity: 0;
 	transition: all 500ms cubic-bezier(0.55, 0, 0.42, 1) .5s;
 }
-.active.banner_item1 .pic_peopel3{
+.active.banner_item4 .pic_peopel3{
 	opacity: 1;
 	right: -5%;
 }
@@ -484,18 +493,18 @@ img.pic_peopel4{
 	opacity: 0;
 	transition: all 500ms cubic-bezier(0.55, 0, 0.42, 1) .5s;
 }
-.active.banner_item1 .pic_peopel4{
+.active.banner_item4 .pic_peopel4{
 	opacity: 1;
 	top: -25%;
 }
-.banner_item2{
+.banner_item1{
 	background: url('../images/bg_banner02.jpg')no-repeat left center / 55%;
 }
-.banner_item2 .banner_pic{
+.banner_item1 .banner_pic{
 	opacity: 0;
 	transition: all .6s cubic-bezier(0.55, 0, 0.42, 1) 0s;
 }
-.active.banner_item2 .banner_pic{
+.active.banner_item1 .banner_pic{
 	opacity: 1;
 }
 .txt_icon{
@@ -534,7 +543,7 @@ img.pic_peopel4{
 	background: url('../images/icon_b2_5.svg')no-repeat center/ 70%;
 	transition: all .2s cubic-bezier(0.55, 0, 0.42, 1)  .8s;
 }
-.active.banner_item2 .txt_icon li{
+.active.banner_item1 .txt_icon li{
 	transform: translate(0, 0);
 	opacity: 1;
 }
@@ -553,7 +562,7 @@ img.pic_cell2{
 	transform: translate(40% , 30%) scale(.2);
 	transition: all 300ms cubic-bezier(0.55, 0, 0.42, 1) .3s;
 }
-.active.banner_item2 img.pic_cell2{
+.active.banner_item1 img.pic_cell2{
 	opacity: 1;
 	transform: translate(0,0) scale(1);
 }
@@ -565,7 +574,7 @@ img.pic_cell3{
 	transform: translate(-40% , 40%) scale(.2);
 	transition: all 300ms cubic-bezier(0.55, 0, 0.42, 1) .3s;
 }
-.active.banner_item2 img.pic_cell3{
+.active.banner_item1 img.pic_cell3{
 	opacity: 1;
 	transform: translate(0,0) scale(1);
 }
@@ -576,27 +585,27 @@ img.pic_cell4{
 	transform: translate(-40% , 30%) scale(.2);
 	transition: all 300ms cubic-bezier(0.55, 0, 0.42, 1) .3s;
 }
-.active.banner_item2 img.pic_cell4{
+.active.banner_item1 img.pic_cell4{
 	opacity: 1;
 	transform: translate(0,0) scale(1);
 }
-.banner_item3{
+.banner_item2{
 	position: relative;
 	justify-content: space-around;
 	padding-right: 60px;
 	background: url('../images/bg_banner03.jpg')no-repeat right center/55%;
 }
-.banner_item3 .banner_txtbox{
+.banner_item2 .banner_txtbox{
 	width: 40%;
 	max-width: 500px;
 }
-.banner_item3 .banner_pic{
+.banner_item2 .banner_pic{
 	position: relative;
 	opacity: 0;
 	transition: all 300ms cubic-bezier(0.55, 0, 0.42, 1) 0s;
 	
 }
-.banner_item3:after{
+.banner_item2:after{
 	content:'';
 	width: 50%;
 	height: 100%;
@@ -605,7 +614,7 @@ img.pic_cell4{
 	bottom: 0;
 	background: url('../images/banner03_cloud.png')no-repeat center/contain;
 }
-.active.banner_item3 .banner_pic{
+.active.banner_item2 .banner_pic{
 	opacity: 1;
 }
 
@@ -637,37 +646,37 @@ img.icon_poker4{
 	height: 50%;
 	transform: rotate(75deg);
 }
-.banner_item4{
+.banner_item3{
 	background: url('../images/bg_banner04.jpg')no-repeat center / cover;
 	flex-wrap: wrap;
 	padding-left: 0;
 	justify-content: center;
 }
-.banner_item4 .left_txt{
+.banner_item3 .left_txt{
 	opacity: 0;
 	transform: translateX(-20px);
 	transition: all 400ms cubic-bezier(0.55, 0, 0.42, 1) .3s;
 	width: 100%;
 	text-align: center;
 }
-.active.banner_item4 .left_txt{
+.active.banner_item3 .left_txt{
 	opacity: 1;
 	transform: translateX(0);
 }
-.banner_item4 .banner_minitxt{
+.banner_item3 .banner_minitxt{
 	opacity: 0;
 	transform: translateX(20px);
 	transition: all 400ms cubic-bezier(0.55, 0, 0.42, 1) .3s;
 }
-.active.banner_item4 .banner_minitxt{
+.active.banner_item3 .banner_minitxt{
 	opacity: 1;
 	transform: translateX(0);
 }
-.banner_item4 .banner_pic{
+.banner_item3 .banner_pic{
 	padding-bottom: calc( 40% * 0.84642857);
 	transition: all 300ms cubic-bezier(0.55, 0, 0.42, 1) 0s;
 }
-.banner_item4 .banner_txtbox{
+.banner_item3 .banner_txtbox{
 	width: 100%;
 	display: flex;
 	padding: 0 80px;
@@ -676,10 +685,10 @@ img.icon_poker4{
 	flex-wrap: wrap;
 }
 
-.banner_item4 .banner_pic{
+.banner_item3 .banner_pic{
 	opacity: 0;
 }
-.banner_item4.active .banner_pic{
+.banner_item3.active .banner_pic{
 	opacity: 1;
 }
 .pic_cell01{
@@ -697,14 +706,14 @@ img.icon_poker4{
 	transition: all 500ms cubic-bezier(0.55, 0, 0.42, 1) 0s;
 	transition-delay: .3s;
 }
-.banner_item4.active .pic_cell02{
+.banner_item3.active .pic_cell02{
 	left: 21%;
 }
-.banner_item4.active .pic_cell03{
+.banner_item3.active .pic_cell03{
 	right: 21%;
 }
 
-.banner_item4 .banner_minitxt{
+.banner_item3 .banner_minitxt{
 	width: 50%;
 }
 
@@ -736,7 +745,6 @@ img.icon_poker4{
 	width: 100%;
 	background: #fff;
 	overflow: hidden;
-	padding-top: 80px;
 }
 .product_inf {
 	position: relative;
@@ -1502,7 +1510,7 @@ footer{
 	align-items: center;
 	flex-direction: column;
 }
-.load{ background: transparent;}
+.load{background: transparent;}
 
 .loading .logo{
 	width: 200px;
@@ -1783,7 +1791,7 @@ footer{
 		padding: 50px 25px 30px;
 	}
 
-	.banner_item4 .banner_minitxt{
+	.banner_item3 .banner_minitxt{
 		width: 45%;
 	}
 
@@ -1826,7 +1834,7 @@ footer{
 	.banner_item{
 		padding-left: 50px;
 	}
-	.banner_item4 .banner_txtbox{
+	.banner_item3 .banner_txtbox{
 		padding: 0 50px;
 	}
 	.product_txt{
@@ -1854,10 +1862,10 @@ footer{
 	.partner{padding:80px 50px 0;}
 	.partner_ul li{padding: 50px 15px 30px;}
 
-	.banner_item3{
+	.banner_item2{
 		padding-right: 0;
 	}
-	.banner_item4{
+	.banner_item3{
 		padding-left: 0;
 	}
 	.partner_pic li{
@@ -1936,30 +1944,30 @@ footer{
 	.banner_item{
 		align-content: center;
 	}
-	.banner_item1,
-	.banner_item2{
+	.banner_item4,
+	.banner_item1{
 		flex-wrap: wrap;
 		padding-left: 0;
 		padding-bottom: 50px;
 		justify-content: flex-end;
 	}
-	.banner_item1,
-	.banner_item3{
+	.banner_item4,
+	.banner_item2{
 		flex-wrap: wrap-reverse;
 		padding-left: 0;
 		padding-bottom: 50px;
 		justify-content: flex-end;
 	}
 	.banner_pic,
-	.banner_item4 .banner_pic{
+	.banner_item3 .banner_pic{
 		width: 100%;
 		padding-bottom: calc( 100% * 0.84642857);
 	}
-	.banner_item3{
+	.banner_item2{
 		padding-top: 50px;
 		background: url('../images/bg_banner03.jpg')no-repeat right top/contain;
 	}
-	.banner_item3 .banner_pic{
+	.banner_item2 .banner_pic{
 		padding-bottom: calc( 80% * 0.84642857);
 	}
 	
@@ -1972,21 +1980,21 @@ footer{
 		top: 30%;
 		right: 25%;
 	}
-	.active.banner_item1 .pic_peopel1{
+	.active.banner_item4 .pic_peopel1{
 		top: 15%;
 	}
 	img.pic_peopel2{
 		top: 0;
 		height: 70%;
 	}
-	.active.banner_item1 .pic_peopel2{
+	.active.banner_item4 .pic_peopel2{
 		right: 55%;
 	}
 	img.pic_peopel3{
 		top: 0;
 		height: 70%;
 	}
-	.active.banner_item1 .pic_peopel3{
+	.active.banner_item4 .pic_peopel3{
 		right: 0;
 	}
 	img.pic_peopel4{
@@ -1994,29 +2002,29 @@ footer{
 		left: 28%;
 		height: 85%;
 	}
-	.active.banner_item1 .pic_peopel4{
+	.active.banner_item4 .pic_peopel4{
 		top: -18%;
 	}
-	.banner_item1 .banner_txtbox{
+	.banner_item4 .banner_txtbox{
 		padding: 50px 100px;
 	}
-	.banner_item2{
+	.banner_item1{
 		padding-right: 0;
 		background: url(../images/bg_banner02.jpg)no-repeat left center / contain;
 	}
-	.banner_item3 .banner_txtbox{
+	.banner_item2 .banner_txtbox{
 		width: 100%;
 		max-width: none;
 	}
-	.banner_item4{
+	.banner_item3{
 		background: url('../images/bg_banner04.jpg')no-repeat center / cover;
 	}
-	.banner_item4 .banner_txtbox{
+	.banner_item3 .banner_txtbox{
 		flex-direction: column;
 		align-items: flex-start;
 		padding: 0px 100px;
 	}
-	.banner_item4 .banner_minitxt{
+	.banner_item3 .banner_minitxt{
 		width: 100%;
 	}
 
@@ -2030,10 +2038,10 @@ footer{
 		transition: all 500ms cubic-bezier(0.55, 0, 0.42, 1) 0s;
 		transition-delay: .3s;
 	}
-	.banner_item4.active .pic_cell02{
+	.banner_item3.active .pic_cell02{
 		left: 10%;
 	}
-	.banner_item4.active .pic_cell03{
+	.banner_item3.active .pic_cell03{
 		right: 11%;
 	}
 	.txt_box::before,
@@ -2155,7 +2163,7 @@ footer{
 	.second_menu > li{
 		font-size: 18px;
 	}
-
+	.product{padding-top: 80px;}
 	.product_inf{
 		width: 100%;
 		flex-direction: column;
@@ -2200,7 +2208,6 @@ footer{
 		justify-content: center;
 		order: 3;
 		margin-top: 50px;
-		padding: 0 1px;
 	}
 	.game_list li{
 		flex: 0 0 45%;
@@ -2210,17 +2217,16 @@ footer{
 	.method{
 		font-size: 14px;
 	}
+	
 	.service{
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
+		padding: 0 0 200px;
 	}
 	.txt_box{
 		padding: 20px 100px 60px;
 		width: 100%;
-	}
-	.service{
-		padding: 0 0 200px;
 	}
 	.service_pic{
 		position: relative;
@@ -2288,8 +2294,8 @@ footer{
 @media (max-width: 576px){
 
 	.banner_txtbox,
-	.banner_item1 .banner_txtbox,
-	.banner_item4 .banner_txtbox{
+	.banner_item4 .banner_txtbox,
+	.banner_item3 .banner_txtbox{
 		padding: 0 15px;
 	}
 	.product_txt{
@@ -2389,8 +2395,8 @@ footer{
 }
 
 @media (max-width: 360px){
-	.banner_item1 .banner_bigtxt,
-	.banner_item2 .banner_bigtxt{
+	.banner_item4 .banner_bigtxt,
+	.banner_item1 .banner_bigtxt{
 		font-size: 34px;
 	}
 	.txt_icon li{
