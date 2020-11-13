@@ -11,6 +11,7 @@ body{
 .mod_bigtxt {
 	font-size: 53px;
 	font-weight: bold;
+	margin-bottom: 10px;
 }
 .mod_midtxt {
 	position: relative;
@@ -439,7 +440,7 @@ body{
 }
 
 .banner_item4 .banner_pic{
-	background: url('../images/bg_banner01.png')no-repeat 0px 80px/ cover;
+	background: url('../images/bg_banner01.png')no-repeat 0px 0px/ cover;
 }
 .banner_item4 .banner_pic:after{
 	content:'';
@@ -707,10 +708,10 @@ img.icon_poker4{
 	transition-delay: .3s;
 }
 .banner_item3.active .pic_cell02{
-	left: 21%;
+	left: 15%;
 }
 .banner_item3.active .pic_cell03{
-	right: 21%;
+	right: 15%;
 }
 
 .banner_item3 .banner_minitxt{
@@ -763,7 +764,8 @@ img.icon_poker4{
 	flex-direction: column;
 	justify-content: center;
 }
-.product_txt .mod_midtxt{
+.product_txt .mod_midtxt,
+.service .mod_midtxt{
 	margin-bottom: 30px;
 }
 .product_txt .mod_midtxt,
@@ -878,7 +880,6 @@ img.icon_poker4{
 }
 .service .mod_minitxt{
 	line-height: 26px;
-	margin-top: 20px;
 }
 .service_pic{
 	content:'';
@@ -929,7 +930,7 @@ img.icon_poker4{
 	display: flex;
 	bottom: 50px;
 	-webkit-user-select: none;
-	z-index: 10;
+	z-index: 2;
 }
 .game_btn {
 	color: #000;
@@ -993,6 +994,7 @@ img.icon_poker4{
 	color: #fff;
 	margin-bottom: 80px;
 }
+
 .partner_ul{
 	display: flex;
 }
@@ -1817,7 +1819,7 @@ footer{
 		width: 40%;
 	}
 	.recruit_item{
-		padding: 30px;
+		padding: 35px;
 	}
 	.recruit_txt{
 		margin-top: 20px;
@@ -1941,6 +1943,9 @@ footer{
 	.banner_minitxt{
 		line-height: 22px
 	}
+	.banner_bigtxt{
+		margin-bottom: 10px;
+	}
 	.banner_item{
 		align-content: center;
 	}
@@ -1958,10 +1963,12 @@ footer{
 		padding-bottom: 50px;
 		justify-content: flex-end;
 	}
-	.banner_pic,
-	.banner_item3 .banner_pic{
+	.banner_pic{
 		width: 100%;
 		padding-bottom: calc( 100% * 0.84642857);
+	}
+	.banner_item3 .banner_pic{
+		padding-bottom: calc( 70% * 0.84642857);
 	}
 	.banner_item2{
 		padding-top: 50px;
@@ -1973,7 +1980,7 @@ footer{
 	
 	.banner_txtbox{
 		width: 100%;
-		padding: 0px 100px;
+		padding: 0px 70px;
 	}
 	img.pic_peopel1{
 		height: 85%;
@@ -2006,7 +2013,7 @@ footer{
 		top: -18%;
 	}
 	.banner_item4 .banner_txtbox{
-		padding: 50px 100px;
+		padding: 50px 70px;
 	}
 	.banner_item1{
 		padding-right: 0;
@@ -2022,7 +2029,7 @@ footer{
 	.banner_item3 .banner_txtbox{
 		flex-direction: column;
 		align-items: flex-start;
-		padding: 0px 100px;
+		margin-top: 20px;
 	}
 	.banner_item3 .banner_minitxt{
 		width: 100%;
@@ -2039,10 +2046,10 @@ footer{
 		transition-delay: .3s;
 	}
 	.banner_item3.active .pic_cell02{
-		left: 10%;
+		left: 15%;
 	}
 	.banner_item3.active .pic_cell03{
-		right: 11%;
+		right: 15%;
 	}
 	.txt_box::before,
 	.txt_box::after,
@@ -2217,7 +2224,10 @@ footer{
 	.method{
 		font-size: 14px;
 	}
-	
+	.product_txt .mod_midtxt,
+	.service .mod_midtxt{
+		margin-bottom: 10px;
+	}
 	.service{
 		display: flex;
 		justify-content: center;
@@ -2296,7 +2306,11 @@ footer{
 	.banner_txtbox,
 	.banner_item4 .banner_txtbox,
 	.banner_item3 .banner_txtbox{
-		padding: 0 15px;
+		padding: 0 30px;
+	}
+	.mod_midtxt,
+	.banner_bigtxt{
+		font-size: 28px;
 	}
 	.product_txt{
 		padding: 0;
@@ -2372,7 +2386,7 @@ footer{
 		padding: 0 10px;
 	}
 	.recruit_item{
-		padding: 30px;
+		padding: 40px;
 	}
 
 }
@@ -2395,10 +2409,7 @@ footer{
 }
 
 @media (max-width: 360px){
-	.banner_item4 .banner_bigtxt,
-	.banner_item1 .banner_bigtxt{
-		font-size: 34px;
-	}
+
 	.txt_icon li{
 		width: 45px;
 		height: 45px;
@@ -2409,6 +2420,7 @@ footer{
 		padding-bottom: calc(100% / 2 * 0.22222222);
 		margin-bottom: 50px;
 	}
+
 	
 }
 
@@ -2417,8 +2429,17 @@ footer{
 	.product_txt{
 		padding: 0 15px 30px;
 	}
+
 	.product_pic{
 		height: 150px;
+	}
+	.banner_bigtxt{
+		margin-bottom: 5px;
+	}
+	.banner_txtbox, 
+	.banner_item4 .banner_txtbox, 
+	.banner_item3 .banner_txtbox{
+		padding: 0 15px;
 	}
 }
 
