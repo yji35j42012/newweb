@@ -307,8 +307,8 @@ body{
 }
 .sign_txt li:not(.title)::before{
 	content:'';
-	width: 5px;
-	height: 5px;
+	width: 3px;
+	height: 3px;
 	background: #000;
 	border-radius: 50%;
 	position: absolute;
