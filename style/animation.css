@@ -1180,9 +1180,11 @@
     top: 50%;
     height: 2px;
     background: rgba(227,223,186,1);
-    background: -moz-linear-gradient(-45deg, rgba(227,223,186,1), rgba(0,0,255,0));
-    background: -webkit-linear-gradient(-45deg, rgba(227,223,186,1),rgba(0,0,255,0));
-    background: linear-gradient(-45deg, rgba(227,223,186,1),rgba(0,0,255,0));
+    background: -moz-linear-gradient(-45deg, rgba(227,223,186,1) 70%, rgba(233, 231, 215, 0));
+    background: -webkit-linear-gradient(-45deg, rgba(227,223,186,1) 70%,rgba(233, 231, 215, 0));
+    background: linear-gradient(-45deg, rgba(227,223,186,1) 70%,rgba(233, 231, 215, 0));
+    background: rgba(227,223,186,1);
+  
     border-radius: 999px;
     animation:  tail 3000ms ease-in-out infinite,
                 shooting 3000ms ease-in-out infinite;
