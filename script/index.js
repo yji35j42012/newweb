@@ -86,7 +86,7 @@
     // 輪播計時器
     function goPlay() {
         if(bannePlay){
-            banneStart = setInterval(banner, 4000)
+            banneStart = setInterval(banner, 6000)
         }      
     };
 
