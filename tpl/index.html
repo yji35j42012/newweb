@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>I cash線上平台</title>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
 </head>
 
 <body ontouchstart="">
-
+	<!-- 不能滑動 在body 加class="unScroll" -->
 	<!-- 最上列 -->
 	<div class="header">
 		<div class="logo logo_title"></div>
@@ -26,22 +26,24 @@
 			<ul class="menu">
 				<li class="logo logo_title"></li>
 				<li>
+					<a href="#hm_1">首頁</a>
+				</li>
+				<li>
 					<a href="#move_about">關於我們</a>
 				</li>
 				<li>
-					<a href="#hm_1">遊戲產品</a>
+					<a href="#hm_2">遊戲產品</a>
 				</li>
 				<li>
-					<a href="#hm_2">服務項目</a>
+					<a href="#hm_3">服務項目</a>
 				</li>
 				<li>
-					<a href="#hm_3">合作流程</a>
+					<a href="#hm_4">合作夥伴</a>
 				</li>
 				<li>
-					<a href="#hm_4">聯絡我們</a>
+					<a href="#hm_6">聯絡我們</a>
 				</li>
-				<li>登入</li>
-
+				<li style="display: none">登入</li>
 				<!-- 打開第二層選單，在class 加 on -->
 				<li class="lang">
 					<span class="lang_txtbox">
@@ -58,32 +60,49 @@
 		</div>
 	</div>
 	<!-- 最上列 -->
+	<!-- 首頁 -->
+	<!-- loading跑完 加active -->
+	<div id="hm_1" class="sign">
+		<!-- 動畫 -->
+		<ul class="cloud_amimate">
+			<li></li>
+		</ul>
+		<!-- 動畫 -->
+		<div class="sign_info">
+			<div class="mod_midtxt mod_font_en">
+				<p>LOCAL OPERATION</p>
+				<p>GLOBAL VISION</p>
+			</div>
+			<div class="sign_txt">
+				<ul>
+					<li class="title">為何需要iCash？</li>
+					<li>堅持品質與不斷挑戰創新的極限</li>
+					<li>擁有豐富專業的競技遊戲開發經驗</li>
+					<li>準確及時的提供數據分析</li>
+					<li>獨特多樣化及掌握市場趨勢遊戲</li>
+					<li>忠誠久且雙贏的合作夥伴關係</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 首頁 -->
 
 	<!-- banner -->
 	<div id="move_about" class="banner">
 		<div class="banner_group">
-			<!-- banner 01 -->
-			<div class="banner_item banner_item1">
-				<div class="banner_txtbox">
-					<div class="banner_bigtxt gradient" data-title="體育賽事">體育賽事</div>
-					<div class="banner_midtxt">各大遊戲知名品牌合作</div>
-					<div class="banner_minitxt">
-						我們提供行業領先的亞博體育、小金體育、IM體育場館,給玩家呈現最高賠率最流暢的投注體驗。我們提供行業領先的亞博體育、小金體育、IM體育場館,給玩家呈現最高賠率最流暢的投注體驗。我們提供行業領先的亞博體育、小金體育、IM體育場館,給玩家呈現最高賠率最流暢的投注體驗。我們提供行業領先的亞博體育、小金體育、IM體育場館,給玩家呈現最高賠率最流暢的投注體驗。
-					</div>
-				</div>
-				<div class="banner_pic">
-					<img class="pic_peopel4" src="../images/pic_peopel4.png" alt="">
-					<img class="pic_peopel2" src="../images/pic_peopel2.png" alt="">
-					<img class="pic_peopel3" src="../images/pic_peopel3.png" alt="">
-					<img class="pic_peopel1" src="../images/pic_peopel1.png" alt="">
-				</div>
-			</div>
 			<!-- banner 02 -->
-			<div class="banner_item banner_item2">
+			<!-- 當前畫面在class 加active離開後active要拿掉 -->
+			<div class="banner_item banner_item1">
+				<div class="banner_pic">
+					<img class="pic_cell1" src="../images/pic_cell1.png" alt="">
+					<img class="pic_cell2" src="../images/pic_cell2.png" alt="">
+					<img class="pic_cell3" src="../images/pic_cell3.png" alt="">
+					<img class="pic_cell4" src="../images/pic_cell4.png" alt="">
+				</div>
 				<div class="banner_txtbox">
-					<div class="banner_bigtxt gradient" data-title="頂尖科技  全新產品">
-						頂尖科技 全新產品</div>
-					<div class="banner_midtxt">多年經驗業內頂尖</div>
+					<div class="banner_bigtxt" data-title="多年經驗業內頂尖">
+						多年經驗業內頂尖
+					</div>
 					<ul class="txt_icon">
 						<li></li>
 						<li></li>
@@ -91,27 +110,27 @@
 						<li></li>
 						<li></li>
 					</ul>
-					<div class="banner_minitxt txt_shadow">
-						擁有代理組織管理結算管理一目瞭然，代理玩家充值，即充即玩，無需等待。全自動數據分析，報表分析，平台運營胸有成竹，後台系統內置多類型優惠活動，定義數據即可上線。擁有代理組織管理結算管理一目瞭然，代理玩家充值，即充即玩，無需等待。全自動數據分析，報表分析，平台運營胸有成竹，後台系統內置多類型優惠活動，定義數據即可上線。
+					<div class="banner_minitxt">
+						優良品牌的遊戲平台開發商
+						iCash我們擁有超過150位對遊戲相當深入了解的菁英，學歷跟經歷是公司基本的要求。
+						<br>
+						<br>
+						每年派菁英參與國內外的各種技術研討會議，使我們的研發團隊更加卓越強大。也因此，我們的產品不斷在市場上深受客戶及玩家喜愛。
+						每日透過數據的分析，來觀察玩家對於遊戲的回饋反應，並做調整遊戲內容，讓每項產品更符合玩家的需求。
 					</div>
-				</div>
-				<div class="banner_pic">
-					<img class="pic_cell1" src="../images/pic_cell1.png" alt="">
-					<img class="pic_cell2" src="../images/pic_cell2.png" alt="">
-					<img class="pic_cell3" src="../images/pic_cell3.png" alt="">
-					<img class="pic_cell4" src="../images/pic_cell4.png" alt="">
 				</div>
 			</div>
 			<!-- banner 03 -->
-			<div class="banner_item banner_item3">
+			<!-- 當前畫面在class 加active離開後active要拿掉 -->
+			<div class="banner_item banner_item2">
 				<div class="banner_txtbox">
-					<div class="banner_bigtxt mod_font_en gradient" data-title="ABOUT">ABOUT</div>
-					<div class="banner_midtxt">關於我們</div>
+					<div class="banner_bigtxt" data-title="
+					關於我們">關於我們</div>
 					<div class="banner_minitxt">
-						ROYAL Gaming
-						是亞洲首屈一指的博彩系統供應商，專長於跨平台遊戲整合技術，包含自有品牌及第三方娛樂平台介接建構，豐富的經驗與成熟的技術，為亞洲市場的客戶開啟線上娛樂事業的最佳契機。ROYAL
-						Gaming
-						是亞洲首屈一指的博彩系統供應商，專長於跨平台遊戲整合技術，包含自有品牌及第三方娛樂平台介接建構，豐富的經驗與成熟的技術，為亞洲市場的客戶開啟線上娛樂事業的最佳契機。
+						在遊戲產業的長久經驗。
+						iCash 以研發為宗旨的企業，總部有約500位員工，各分佈於馬尼拉、新加坡兩地，而其中研發部門、 技術企劃、網管部門是公司的三大核心。
+						每年推出旗艦款的競技遊戲，除了滿足平台的玩家喜好,也讓客戶每年都期待的心情。
+						我們持續在世界各地，並與許多當地的業者建立起長久的合作夥伴關係，以分工合作來創造雙贏的結果。我們的足跡遍佈了歐洲、東南亞、印度等地，而全年超過八千百美元的營收。
 					</div>
 				</div>
 				<div class="banner_pic">
@@ -122,40 +141,76 @@
 					<img src="../images/04.png" alt="">
 				</div>
 			</div>
+
 			<!-- banner 04 -->
-			<div class="banner_item banner_item4">
+			<!-- 當前畫面在class 加active離開後active要拿掉 -->
+			<div class="banner_item banner_item3">
 				<div class="banner_pic">
 					<img class="pic_cell03" src="../images/pic_cell03.png" alt="">
 					<img class="pic_cell02" src="../images/pic_cell02.png" alt="">
 					<img class="pic_cell01" src="../images/pic_cell01.png" alt="">
 				</div>
 				<div class="banner_txtbox">
-					<span class="left_txt">
-						<div class="banner_bigtxt gradient" data-title="智能活動系統">智能活動系統</div>
-						<div class="banner_midtxt">批量審核，自動派彩</div>
-					</span>
+					<div class="left_txt banner_bigtxt" data-title="業界引領趨勢">業界引領趨勢</div>
 					<div class="banner_minitxt">
-						Icash線上平台，提供豐富的活動選擇：註冊送紅包、存款開寶箱、打碼玩拉霸、登錄簽到領彩金、註冊送、存就送...且支持自定義活動。Icash線上平台，提供豐富的活動選擇：註冊送紅包、存款開寶箱、打碼玩拉霸、登錄簽到領彩金、註冊送、存就送...且支持自定義活動。
+						iCash除了對新技術的鑽研開發，也不斷得研發創新的玩法，每年許多技術人員參與國際間競技遊戲比賽，以隨時掌握國際上的流行脈動。
+						2019年iCash推出了一款以混和實境(MR)的捕魚遊，這充分的展現iCash不斷研發與獨特創新的態度，也廣受業界的注目與好評。
+						在未來，iCash將持續的挑戰各種研發，積極與全球各地不同領域的專業人才合作，為玩家與產業帶來更多驚喜。
 					</div>
 				</div>
 			</div>
+
 			<!-- banner 01 -->
-			<div class="banner_item banner_item1">
+			<!-- 當前畫面在class 加active離開後active要拿掉 -->
+			<div class="banner_item banner_item4">
 				<div class="banner_txtbox">
-					<div class="banner_bigtxt gradient" data-title="體育賽事">體育賽事</div>
-					<div class="banner_midtxt">各大遊戲知名品牌合作</div>
+					<div class="banner_bigtxt" data-title="夥伴與忠誠的關係">夥伴與忠誠的關係</div>
 					<div class="banner_minitxt">
-						我們提供行業領先的亞博體育、小金體育、IM體育場館,給玩家呈現最高賠率最流暢的投注體驗。我們提供行業領先的亞博體育、小金體育、IM體育場館,給玩家呈現最高賠率最流暢的投注體驗。我們提供行業領先的亞博體育、小金體育、IM體育場館,給玩家呈現最高賠率最流暢的投注體驗。我們提供行業領先的亞博體育、小金體育、IM體育場館,給玩家呈現最高賠率最流暢的投注體驗。
+						iCash與夥伴來共同創造雙贏是我們要的格局，以及最大利益的長遠合作關係。在這多年來，我們維持著這樣子的態度原則，正如同iCash的三大核心價值：「透明、成長、卓越」，我們相信，只要真誠的互動、共同成長、追求卓越進步。以雙方無私的合作關係，就能持續得成長，且歷久不衰。
 					</div>
 				</div>
 				<div class="banner_pic">
 					<img class="pic_peopel4" src="../images/pic_peopel4.png" alt="">
 					<img class="pic_peopel2" src="../images/pic_peopel2.png" alt="">
 					<img class="pic_peopel3" src="../images/pic_peopel3.png" alt="">
+					<!-- <img class="bg_banner02" src="../images/bg_banner02.png" alt=""> -->
 					<img class="pic_peopel1" src="../images/pic_peopel1.png" alt="">
 				</div>
 			</div>
+
+			<!-- banner 02 -->
+			<!-- 當前畫面在class 加active離開後active要拿掉 -->
+			<div class="banner_item banner_item1">
+				<div class="banner_pic">
+					<img class="pic_cell1" src="../images/pic_cell1.png" alt="">
+					<img class="pic_cell2" src="../images/pic_cell2.png" alt="">
+					<img class="pic_cell3" src="../images/pic_cell3.png" alt="">
+					<img class="pic_cell4" src="../images/pic_cell4.png" alt="">
+				</div>
+				<div class="banner_txtbox">
+						<div class="banner_bigtxt" data-title="多年經驗業內頂尖">
+							多年經驗業內頂尖</div>
+						<ul class="txt_icon">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<div class="banner_minitxt">
+							優良品牌的遊戲平台開發商
+							iCash我們擁有超過150位對遊戲相當深入了解的菁英，學歷跟經歷是公司基本的要求。
+							<br>
+							<br>
+							每年派菁英參與國內外的各種技術研討會議，使我們的研發團隊更加卓越強大。也因此，我們的產品不斷在市場上深受客戶及玩家喜愛。
+							每日透過數據的分析，來觀察玩家對於遊戲的回饋反應，並做調整遊戲內容，讓每項產品更符合玩家的需求。
+						</div>
+				</div>
+			</div>
 		</div>
+		
+		<button class="banner_btn prev" id="bannerPrev"></button>
+		<button class="banner_btn next" id="bannerNext"></button>
 		<!-- 目前的頁面 在class 加上 on -->
 		<ul class="banner_dots">
 			<li class="on"></li>
@@ -167,19 +222,18 @@
 	<!-- banner -->
 
 	<!-- 產品服務 -->
-	<div id="hm_1" class="product active">
+	<div id="hm_2" class="product">
 		<div class="product_inf bg_triangle_in_out">
 			<div class="product_txt">
-				<div class="mod_bigtxt mod_font_en">PRODUCT</div>
-				<div class="mod_midtxt">遊戲產品</div>
-				<div class="mod_minitxt">ROYAL Gaming
-					提供全面的一站式服務，不論在產品質量、服務管理以及技術支援，我們的專業團隊及技術人員都會為客人提供滿意及稱心之服務。ROYAL
-					Gaming 提供全面的一站式服務，不論在產品質量、服務管理以及技術支援，我們的專業團隊及技術人員都會為客人提供滿意及稱心之服務。</div>
+				<div class="mod_midtxt">產品服務</div>
+				<div class="mod_minitxt">
+					iCash 創立至今，一直屹立於行業頂尖。作為遊戲系統供應商，以用戶全平台遊戲體驗為核心，提供最新的全方位技術支持，致力打造遊戲娛樂生態圈。 並與知名娛樂公司成為合作夥伴，在資源優勢上從系統結構、大數據分析、行業生態建設等多方面進行深度優化，完善產品技術和建立更成熟的運營團隊。
+				</div>
 			</div>
 			<div class="product_pic">
-				<img class="right_left_move" src="../images/p_3.png" alt="">
-				<img class="up_down_move" src="../images/p_2.png" alt="">
-				<img class="left_right_move" src="../images/p_1.png" alt="">
+				<img class="product_p1 left_right_move" src="../images/product_p1.png" alt="">
+				<img class="product_p2 up_down_move" src="../images/product_p2.png" alt="">
+				<img class="product_p3 right_left_move" src="../images/product_p3.png" alt="">
 			</div>
 		</div>
 		<div class="game_box">
@@ -193,197 +247,323 @@
 	</div>
 	<!-- 產品服務 -->
 
-	<!-- 服務項目與合作流程 -->
-	<div class="SP_box">
-		<div id="hm_2" class="service">
-			<ul class="bg_bubbles_in_out">
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
+	<!-- 服務項目 -->
+	<div id="hm_3" class="service">
+		<div class="service_pic" >
+			<!-- 流星動畫 -->
+			<ul class="night" style="display: none">
+				<li class="shooting_star"></li>
+				<li class="shooting_star"></li>
+				<li class="shooting_star"></li>
+				<li class="shooting_star"></li>
+				<li class="shooting_star"></li>
+				<li class="shooting_star"></li>
+				<li class="shooting_star"></li>
+				<li class="shooting_star"></li>
+				<li class="shooting_star"></li>
+				<li class="shooting_star"></li>
+				<li class="shooting_star"></li>
+				<li class="shooting_star"></li>
 			</ul>
-			<div class="txt_box">
-				<div class="mod_bigtxt gradient mod_font_en" data-title="SERVICE">SERVICE</div>
-				<div class="mod_midtxt txt_shadow">服務項目與流程</div>
-				<div class="mod_minitxt txt_shadow">ROYAL Gaming
-					提供全面的一站式服務，不論在產品質量、服務管理以及技術支援，我們的專業團隊及技術人員都會為客人提供滿意及稱心之服務。
+			<!-- 流星動畫 -->
+
+			<!-- 煙火動畫 -->
+			<div class="fireworks">
+				<div class="fire fire1">
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+				</div>
+				<div class="fire fire2">
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+				</div>
+				<div class="fire fire3">
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+				</div>
+				<div class="fire fire4">
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+					<div class="punt"></div>
+				</div>
+
+			</div>
+			<!-- 煙火動畫 -->
+		</div>
+		<div class="txt_box">
+			<div class="mod_midtxt" data-title="SERVICE">服務項目與流程</div>
+			<div class="mod_minitxt">
+				iCash 提供全面的服務，不論在產品質量、服務管理以及技術支援，我們的專業團隊及技術人員都會為客人提供滿意及稱心之服務。防禦系統部分我們採用自家研發的CDN立體化防攻擊體系，24小時全面抵禦任何類型的DDoS或CC攻擊，並提供獨創防劫持技術，通過加密演算法和密鑰交換演算法加密建立安全連線確保信息傳輸。
+			</div>
+		</div>
+		
+		<div class="sp_btn_box">
+			<button class="sp_btn game_btn">
+				<div class="btn_inf">
+					<i class="icon_btn icon_advantages"></i>
+					<span class="txt">
+						<tt class="zh_txt">遊戲試玩</tt>
+						<tt>Product advantages</tt>
+					</span>
+				</div>
+			</button>
+			<button class="sp_btn businese_btn">
+				<div class="btn_inf">
+					<i class="icon_btn icon_process"></i>
+					<span class="txt">
+						<tt class="zh_txt">商務合作</tt>
+						<tt>Cooperation Process</tt>
+					</span>
+				</div>
+			</button>
+		</div>
+	</div>
+	<!-- 服務項目 -->
+	
+	<!-- 合作流程 -->
+	<div id="hm_4" class="partner">
+		<!-- 光從左右中間打 -->
+		<div class="light" style="display: none1">
+			<span class="light1"></span>
+			<span class="light2"></span>
+			<span class="light3"></span>
+			<span class="light4"></span>
+			<span class="light5"></span>
+			<span class="light6"></span>
+		</div>
+		<!-- 光從左右中間打 -->
+		<div class="mod_midtxt">合作流程</div>
+		
+		<ul class="partner_ul">
+			<li>
+				<div class="list_num">01</div>
+				<div class="list_txt txt_shadow">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna
+				</div>
+
+				<span class="sop">
+					<tt class="gradient" data-title="簽約">簽約</tt>
+				</span>
+			<li>
+				<div class="list_num">02</div>
+				<div class="list_txt txt_shadow">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna
+				</div>
+				<span class="sop">
+					<tt class="gradient" data-title="開站">開站</tt>
+				</span>
+			</li>
+			<li>
+				<div class="list_num">03</div>
+				<div class="list_txt txt_shadow">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna
+				</div>
+				<span class="sop">
+					<tt class="gradient" data-title="調整">調整</tt>
+				</span>
+			</li>
+			<li>
+				<div class="list_num">04</div>
+				<div class="list_txt txt_shadow">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna
+				</div>
+				<span class="sop">
+					<tt class="gradient" data-title="上線">上線</tt>
+				</span>
+			</li>
+		</ul>
+		<ul class="partner_pic">
+			<li>
+				<img src="../images/pic_com1.png" alt="">
+			</li>
+			<li>
+				<img src="../images/pic_com2.png" alt="">
+			</li>
+			<li>
+				<img src="../images/pic_com3.png" alt="">
+			</li>
+			<li>
+				<img src="../images/pic_com4.png" alt="">
+			</li>
+			<li>
+				<img src="../images/pic_com2.png" alt="">
+			</li>
+			<li>
+				<img src="../images/pic_com1.png" alt="">
+			</li>
+			<li>
+				<img src="../images/pic_com4.png" alt="">
+			</li>
+			<li>
+				<img src="../images/pic_com3.png" alt="">
+			</li>
+		</ul>
+	</div>
+	<!-- 合作流程 -->
+
+	<!-- 人才招募 -->
+	<div id="hm_5" class="recruit">
+		<div class="recruit_l">
+			<!-- 粒子動畫 -->
+			<ul class="bg_bubbles_in_out">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+			</ul>
+			<!-- 粒子動畫 -->
+			<div class="txtbox">
+				<div class="mod_bigtxt txt_shadow">Recruitment</div>
+				<div class="mod_midtxt txt_shadow">人才招募</div>
+			</div>
+		</div>
+		<div class="recruit_r">
+			<!-- 上下滑  transform: translateY(0 ~ -200%)-->
+			<div class="recruit_group">
+				<div class="recruit_item active"> 
+					<div class="sop">軟體開發</div>
+					<div class="recruit_txt mod_minitxt">
+						我們使用C++ / C# / Asp.net / MS-SQL / Objective-C / Java等技術語言；
+						只要你擅長其中一樣，且對技術狂熱，喜好接受挑戰。
+					</div>
+				</div>
+				<div class="recruit_item">
+					<div class="sop">美術設計</div>
+					<div class="recruit_txt mod_minitxt">
+						我們需求擅長2D/3D、美術設計的完美主義者，
+						喜歡美式風格創作，時時刻刻被美感思維給佔據的你
+					</div>
+				</div>
+				<div class="recruit_item">
+					<div class="sop">遊戲企劃</div>
+					<div class="recruit_txt mod_minitxt">
+						我們正在找尋對Game瘋狂迷戀，同時具備創作熱門遊戲基因、野心的企劃人。
+					</div>
+				</div>
+				<div class="recruit_item"> 
+					<div class="sop">軟體開發</div>
+					<div class="recruit_txt mod_minitxt">
+						我們使用C++ / C# / Asp.net / MS-SQL / Objective-C / Java等技術語言；
+						只要你擅長其中一樣，且對技術狂熱，喜好接受挑戰。
+					</div>
 				</div>
 			</div>
 
-			<div class="sp_pic right_small_move"></div>
-			<div class="sp_btn_box">
-				<button class="sp_btn">
-					<div class="btn_inf">
-						<i class="icon_btn icon_advantages"></i>
-						<span class="txt">
-							<tt class="zh_txt">遊戲試玩</tt>
-							<tt>Product advantages</tt>
-						</span>
-					</div>
-				</button>
-				<button class="sp_btn">
-					<div class="btn_inf">
-						<i class="icon_btn icon_process"></i>
-						<span class="txt">
-							<tt class="zh_txt">商務合作</tt>
-							<tt>Cooperation Process</tt>
-						</span>
-					</div>
-				</button>
-			</div>
-		</div>
-
-		<div id="hm_3" class="partner stars">
-			<div class="mod_bigtxt gradient mod_font_en" data-title="PARNER">PARNER</div>
-			<div class="mod_midtxt txt_shadow">合作流程</div>
-			<ul class="partner_ul">
-				<li>
-					<div class="list_num">01</div>
-					<div class="list_txt txt_shadow">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-						diam
-						nonummy
-						nibh euismod tincidunt ut laoreet dolore magna</div>
-
-					<span class="sop">
-						<tt class="gradient" data-title="簽約">簽約</tt>
-					</span>
-				<li>
-					<div class="list_num">02</div>
-					<div class="list_txt txt_shadow">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-						diam
-						nonummy
-						nibh euismod tincidunt ut laoreet dolore magna</div>
-					<span class="sop">
-						<tt class="gradient" data-title="開站">開站</tt>
-					</span>
-				</li>
-				<li>
-					<div class="list_num">03</div>
-					<div class="list_txt txt_shadow">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-						diam
-						nonummy
-						nibh euismod tincidunt ut laoreet dolore magna</div>
-					<span class="sop">
-						<tt class="gradient" data-title="調整">調整</tt>
-					</span>
-				</li>
-				<li>
-					<div class="list_num">04</div>
-					<div class="list_txt txt_shadow">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-						diam
-						nonummy
-						nibh euismod tincidunt ut laoreet dolore magna</div>
-					<span class="sop">
-						<tt class="gradient" data-title="上線">上線</tt>
-					</span>
-				</li>
+			<!-- 目前的頁面 在class 加上 on -->
+			<ul class="recruit_dots">
+				<li class="on" @click="change(0)"></li>
+				<li @click="change(1)"></li>
+				<li @click="change(2)"></li>
 			</ul>
-			<ul class="partner_pic">
-				<li>
-					<img src="../images/pic_com1.png" alt="">
-				</li>
-				<li>
-					<img src="../images/pic_com2.png" alt="">
-				</li>
-				<li>
-					<img src="../images/pic_com3.png" alt="">
-				</li>
-				<li>
-					<img src="../images/pic_com4.png" alt="">
-				</li>
-				<li>
-					<img src="../images/pic_com2.png" alt="">
-				</li>
-				<li>
-					<img src="../images/pic_com1.png" alt="">
-				</li>
-				<li>
-					<img src="../images/pic_com4.png" alt="">
-				</li>
-				<li>
-					<img src="../images/pic_com3.png" alt="">
-				</li>
-			</ul>
-
-			<div class="start_box" style="display: none">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-
-			<!-- 光從左右中間打 -->
-			<div class="light" style="display: none1">
-				<span class="light1"></span>
-				<span class="light2"></span>
-				<span class="light3"></span>
-				<span class="light4"></span>
-				<span class="light5"></span>
-				<span class="light6"></span>
-			</div>
-			<!-- 光從左右中間打 -->
-
 		</div>
 	</div>
-	<!-- 服務項目與合作流程 -->
+	<!-- 人才招募 -->
+
 	<!-- 聯絡我們 -->
-	<div id="hm_4" class="contact">
+	<div id="hm_6" class="contact">
 		<!-- 動畫 -->
 		<ul class="bg_bubbles">
 			<li></li>
@@ -429,17 +609,33 @@
 		</ul>
 		<!-- 動畫 -->
 
-		<span class="contact_title txt_shadow">CONTACT US</span>
-		<div class="mod_minitxt txt_shadow">
-			IF YOU GOT ANY QUESTIONS
-			<br>
+		<span class="contact_title">CONTACT US</span>
+		<div class="mod_minitxt">
+			IF YOU GOT ANY QUESTIONS<br>
 			PLEASE DO NOT HESTATE TO SEND US A MESSAGE
 		</div>
 		<div class="input_box">
-			<input type="text" class="inp_txt" placeholder="Name">
-			<input type="text" class="inp_txt" placeholder="Country">
-			<input type="text" class="inp_txt" placeholder="E-mail">
-			<textarea type="text" class="inp_txt higger"></textarea>
+			<div class="input_box_l">
+				<input type="text" class="inp_txt" placeholder="Name">
+				<label class="inp_txt mod_select">
+					<select >
+						<option>Country</option>
+						<option>Taipei</option>
+					</select>
+				</label>
+				<input type="text" class="inp_txt" placeholder="E-mail">
+				<input type="text" class="inp_txt" placeholder="Tel">
+				<input type="text" class="inp_txt" placeholder="Messenger ID">
+			</div>
+			<div class="input_box_r">
+				<label class="inp_txt mod_select">
+					<select >
+						<option>Gaming Interested</option>
+					</select>
+				</label>
+				<input type="text" class="inp_txt" placeholder="Subject">
+				<textarea type="text" class="inp_txt higger" placeholder="Content"></textarea>
+			</div>
 			<button class="submit_btn">SEND</button>
 		</div>
 		<span class="contact_note txt_shadow">Connect with us!</span>
@@ -451,32 +647,37 @@
 		</ul>
 	</div>
 	<!-- 聯絡我們 -->
+
 	<footer>© 2020 I CASH Gaming. All Rights Reserved.</footer>
-
-
-
-
 	<!-- loading打開用 display:flex，動畫加上active -->
-	<div class="mask load active" id="load" style="display: none;">
-		<div class="loading">
-			<div class="logo"></div>
-			<div class="load_num"><tt>100</tt> %</div>
-			<div class="loading_box">
-				<div class="loading_bar">
-					<!-- 控制跑條 left:0~100% -->
-					<span style="left: 99%;"></span>
+	<div class="mask load active" id="load" >
+		<div class="circle_mask">
+			<div class="loading">
+				<div class="logo"></div>
+				<div class="load_num"><tt>100</tt> %</div>
+				<div class="loading_box">
+					<div class="loading_bar">
+						<!-- 控制跑條 left:0~100% -->
+						<span style="left: 99%;"></span>
+					</div>
+					<!-- 控制圓亮點 left:0~100% -->
+					<span class="light_ball" style="left: 99%;"></span>
 				</div>
-				<!-- 控制圓亮點 left:0~100% -->
-				<span class="light_ball" style="left: 99%;"></span>
-			</div>
 
+			</div>
 		</div>
+		
 	</div>
-	<!-- 登入頁打開用 display:flex，動畫加上active -->
-	<div class="mask login" style="display: none" id="signIn">
+	<!-- 登入頁打開用 display:flex，動畫加上 active -->
+	<div class="mask login active" style="display: none" id="signIn">
 		<div class="login_box">
 			<button class="login_close_btn"></button>
-			<div class="login_pic"></div>
+			<div class="login_pic">
+				<div class="txt">
+					<span class="mod_midtxt">I Cash</span>
+					<span class="mod_minitxt">Online Platform</span>
+				</div>
+			</div>
 			<div class="login_txt">
 				<div class="login_title txt_shadow">Sign Up</div>
 				<div class="login_acc">
@@ -498,6 +699,7 @@
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'></script>
 	<script src="../script/index.js"></script>
+
 </body>
 
 </html>
