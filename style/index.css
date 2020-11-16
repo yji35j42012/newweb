@@ -2549,9 +2549,9 @@ screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
 }
 .partner_ul li:active{
 	bottom: 20px;
-	will-change: contents;
+	will-change: transform;
 }
 .partner_ul li:active::after{
 	background-size: 60%;
-	will-change: contents;
+	will-change: transform;
 }
