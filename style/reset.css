@@ -49,6 +49,7 @@ body {
 	font-family: 'Noto Sans TC', sans-serif;
 	font-size: 13px;	
 	scroll-behavior: smooth;
+	line-height: 1;
 }
 *:hover,
 *:focus,
