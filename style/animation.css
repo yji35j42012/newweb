@@ -1212,7 +1212,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    height: 2px;
+    height: 3px;
     background: linear-gradient(-45deg, rgba(227,223,186, 0) 20%,  rgba(227,223,186,1) 70%,rgba(227,223,186, 0));
     animation:  tail 1000ms ease-in-out infinite,
                 shooting 1000ms ease-in-out infinite;
@@ -1286,7 +1286,7 @@
 }
 @media (max-width: 414px){
     .shooting_star {
-        height: 3px;
+        height: 1px;
     }
     .shooting_star:nth-child(2){
         top: calc(50% - -50px);
