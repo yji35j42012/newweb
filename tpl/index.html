@@ -63,7 +63,7 @@
 	<!-- 最上列 -->
 	<!-- 首頁 -->
 	<!-- loading跑完 加active -->
-	<div id="hm_1" class="sign active">
+	<div id="hm_1" class="sign">
 		<!-- 動畫 -->
 		<ul class="cloud_amimate">
 			<li></li>
@@ -210,8 +210,8 @@
 			</div>
 		</div>
 		
-		<button class="banner_btn prev"></button>
-		<button class="banner_btn next"></button>
+		<button class="banner_btn prev" id="bannerPrev"></button>
+		<button class="banner_btn next" id="bannerNext"></button>
 		<!-- 目前的頁面 在class 加上 on -->
 		<ul class="banner_dots">
 			<li class="on"></li>
@@ -253,6 +253,12 @@
 		<div class="service_pic" >
 			<!-- 流星動畫 -->
 			<ul class="night" >
+				<li class="shooting_star"></li>
+				<li class="shooting_star"></li>
+				<li class="shooting_star"></li>
+				<li class="shooting_star"></li>
+				<li class="shooting_star"></li>
+				<li class="shooting_star"></li>
 				<li class="shooting_star"></li>
 				<li class="shooting_star"></li>
 				<li class="shooting_star"></li>
@@ -479,6 +485,13 @@
 						我們正在找尋對Game瘋狂迷戀，同時具備創作熱門遊戲基因、野心的企劃人。
 					</div>
 				</div>
+				<div class="recruit_item"> 
+					<div class="sop">軟體開發</div>
+					<div class="recruit_txt mod_minitxt">
+						我們使用C++ / C# / Asp.net / MS-SQL / Objective-C / Java等技術語言；
+						只要你擅長其中一樣，且對技術狂熱，喜好接受挑戰。
+					</div>
+				</div>
 			</div>
 
 			<!-- 目前的頁面 在class 加上 on -->
@@ -579,7 +592,7 @@
 
 	<footer>© 2020 I CASH Gaming. All Rights Reserved.</footer>
 	<!-- loading打開用 display:flex，動畫加上active -->
-	<div class="mask load active" id="load" style="display: none1;">
+	<div class="mask load active" id="load" >
 		<div class="circle_mask">
 			<div class="loading">
 				<div class="logo"></div>

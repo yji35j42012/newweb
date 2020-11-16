@@ -2,6 +2,7 @@
 
   var nowLoad = 0
   var imgLength = $('img').length
+
    $('img').each(function(){
        var x = $('img').index(this)
         $(this).ready(function(){
@@ -17,14 +18,20 @@
        $('.loading tt').text(now)
        if(now >= 100){
            clearInterval(barTime)
-           $('#load').fadeOut(1000);
+           $('#load').removeClass('active');
+           setTimeout(function(){
+                $('#load').fadeOut()
+            },1000)    
+           setTimeout(function(){
+                $('#hm_1').addClass('active')
+           },1000)         
        }
-   },10);
+   },100);
 
 
  // 登入彈窗控制
    var signIn = false;
-   $('.menu li:eq(7)').click(function(){
+   $('.menu li:eq(6)').click(function(){
         signIn = true;
         nowSignIn()
    })
@@ -38,12 +45,10 @@
      else{ $('#signIn').fadeOut(500)} 
    }
 
-
-    
     var move = 0
     var list = $('.banner_group>div').length
     var banneStart;
-    var bannePlay = true
+    var bannePlay = true;
 
     $(document).ready(function(){
         bannePlay = true
@@ -81,7 +86,7 @@
     // 輪播計時器
     function goPlay() {
         if(bannePlay){
-            banneStart = setInterval(banner, 5000)
+            banneStart = setInterval(banner, 4000)
         }      
     };
 
@@ -95,8 +100,6 @@
     // 輪播按鍵點擊事件
     $('.banner_dots li').click(function(){
         bannePlay = false;
-
-        console.log(bannePlay)
         $('.banner_dots li').removeClass('on')
         var find = $('.banner_dots li').index(this)
         if(move < 3){
@@ -120,6 +123,19 @@
             }	   
         }
     })
+
+
+    // 輪播按鈕點擊事件
+    $('#bannerPrev').click(function(){
+        move < 1 ? move =3 : move--
+        $('.banner_dots li').removeClass('on')
+		if(move>0 && move < list - 1){action_1()}
+        else if(move < 1){action_2()} 
+    })
+    $('#bannerNext').click(function(){
+        banner()
+    })
+
  
     // ====== 函式區塊 ======
 	function goTransform(page,time){
@@ -150,10 +166,33 @@
     $('.menu li').click(function(){$('.menu_btn').removeClass('active')})
     
 	var scroll = $(window).scroll(function () {
-		for (var i = 1; i < 7; i++) {
+		for (var i = 1; i < 6; i++) {
 			if (scroll.scrollTop() > $(`#hm_${i}`).offset().top + $(`#hm_${i}`).height() / 3 * 2) {
 				$(`#hm_${i + 1}`).addClass('active')
 			}
 		}
     })
-    
+
+
+    var recruitTime = 0
+    setInterval(() => {
+        recruitTime == 3? recruitTime = 0 : recruitTime++
+        $('.recruit_dots li').removeClass('on')
+
+        if(recruitTime<3){
+            recruit(recruitTime,1)
+            $(`.recruit_dots li:eq(${recruitTime})`).addClass('on')
+        }else if(recruitTime == 3){      
+            recruit(recruitTime,1)
+            $(`.recruit_dots li:eq(0)`).addClass('on')
+            setTimeout(() => {
+                recruitTime = 0 
+                recruit(recruitTime,0)
+            },1000);
+        }  
+       
+    },2000);
+
+    function recruit(page,time){
+        $('.recruit_group').css('transform',`translateY(-${page *100}%)`).css('transition',`${time}s`);  
+    }
