@@ -193,6 +193,7 @@ body{
 .second_menu > li:hover{
 	color: #07bceb;
 	font-size: 15px;
+	
 }
 .sign{
 	position: relative;
@@ -2500,9 +2501,11 @@ screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
 	}
 	.partner_ul li:hover{
 		bottom: 20px;
+		will-change: transform;
 	}
 	.partner_ul li:hover::after{
 		background-size: 60%;
+		will-change: transform;
 	}
 }
 .banner_dots li:not(.on):active{
