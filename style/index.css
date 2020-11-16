@@ -3,9 +3,7 @@ body{
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 }
-*{
-	will-change: transform;
-}
+
 /* share use start*/
 .mod_font_en{
 	font-family: 'Abril Fatface', cursive;
