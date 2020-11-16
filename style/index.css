@@ -427,6 +427,7 @@ body{
 .active.banner_item2 .banner_minitxt {
 	opacity: 1;
 	transform: translateY(0);
+	will-change: transform ;
 }
 .banner_pic{
 	position: relative;
