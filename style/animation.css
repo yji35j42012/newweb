@@ -1284,6 +1284,10 @@
     -webkit-animation-delay: 3816ms;
     animation-delay: 3368ms;
 }
+@media (max-width: 768px){
+    .shooting_star {
+        height: 2px;
+}
 @media (max-width: 414px){
     .shooting_star {
         height: 1px;
