@@ -77,7 +77,7 @@
         upX = e.clientX
        if(downX - upX > 100){
             move == list - 1? move = 1 : move++
-            $('.banner_dots li').removeClass('on')
+            $('.banner_dots li').removeClass('active')
 		    if(move>0 && move < list - 1){action_1()}
             else if(move == list - 1){action_2()} 
        }
@@ -86,13 +86,13 @@
     // 輪播計時器
     function goPlay() {
         if(bannePlay){
-            banneStart = setInterval(banner, 6000)
+            banneStart = setInterval(banner, 16000)
         }      
     };
 
     function banner(){
         move == list - 1? move = 1 : move++
-        $('.banner_dots li').removeClass('on')
+        $('.banner_dots li').removeClass('active')
 		if(move>0 && move < list - 1){action_1()}
         else if(move == list - 1){action_2()}     
     }
@@ -100,7 +100,7 @@
     // 輪播按鍵點擊事件
     $('.banner_dots li').click(function(){
         bannePlay = false;
-        $('.banner_dots li').removeClass('on')
+        $('.banner_dots li').removeClass('active')
         var find = $('.banner_dots li').index(this)
         if(move < 3){
             move = find;
@@ -128,7 +128,7 @@
     // 輪播按鈕點擊事件
     $('#bannerPrev').click(function(){
         move < 1 ? move =3 : move--
-        $('.banner_dots li').removeClass('on')
+        $('.banner_dots li').removeClass('active')
 		if(move>0 && move < list - 1){action_1()}
         else if(move < 1){action_2()} 
     })
@@ -148,7 +148,7 @@
     function action_1(){
         goTransform(move, 0.5);
         setTimeout(function(){changeClass(move+1)},500);
-        $(`.banner_dots li:eq(${move})`).addClass('on')
+        $(`.banner_dots li:eq(${move})`).addClass('active')
     }
     function action_2(){
         goTransform(move, 0.5);
@@ -157,7 +157,7 @@
             changeClass(1)
             move = 0
         },510)
-        $(`.banner_dots li:eq(0)`).addClass('on')
+        $(`.banner_dots li:eq(0)`).addClass('active')
     }
 
     
@@ -177,14 +177,14 @@
     var recruitTime = 0
     setInterval(() => {
         recruitTime == 3? recruitTime = 0 : recruitTime++
-        $('.recruit_dots li').removeClass('on')
+        $('.recruit_dots li').removeClass('active')
 
         if(recruitTime<3){
             recruit(recruitTime,1)
-            $(`.recruit_dots li:eq(${recruitTime})`).addClass('on')
+            $(`.recruit_dots li:eq(${recruitTime})`).addClass('active')
         }else if(recruitTime == 3){      
             recruit(recruitTime,1)
-            $(`.recruit_dots li:eq(0)`).addClass('on')
+            $(`.recruit_dots li:eq(0)`).addClass('active')
             setTimeout(() => {
                 recruitTime = 0 
                 recruit(recruitTime,0)

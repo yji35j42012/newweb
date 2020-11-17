@@ -44,14 +44,14 @@
 					<a href="#hm_6">聯絡我們</a>
 				</li>
 				<li style="display: none">登入</li>
-				<!-- 打開第二層選單，在class 加 on -->
+				<!-- 打開第二層選單，在class 加 active -->
 				<li class="lang">
 					<span class="lang_txtbox">
 						<tt class="lang_title">語系</tt>
 						<tt class="lang_txt">繁體中文</tt>
 					</span>
 					<ul class="second_menu">
-						<li class="on">繁體中文</li>
+						<li class="active">繁體中文</li>
 						<li>簡體</li>
 						<li>English</li>
 					</ul>
@@ -62,18 +62,18 @@
 	<!-- 最上列 -->
 	<!-- 首頁 -->
 	<!-- loading跑完 加active -->
-	<div id="hm_1" class="sign">
+	<div id="hm_1" class="home">
 		<!-- 動畫 -->
 		<ul class="cloud_amimate">
 			<li></li>
 		</ul>
 		<!-- 動畫 -->
-		<div class="sign_info">
+		<div class="home_info">
 			<div class="mod_midtxt mod_font_en">
 				<p>LOCAL OPERATION</p>
 				<p>GLOBAL VISION</p>
 			</div>
-			<div class="sign_txt">
+			<div class="home_txt">
 				<ul>
 					<li class="title">為何需要iCash？</li>
 					<li>堅持品質與不斷挑戰創新的極限</li>
@@ -90,7 +90,7 @@
 	<!-- banner -->
 	<div id="move_about" class="banner">
 		<div class="banner_group">
-			<!-- banner 02 -->
+			<!-- banner 01 -->
 			<!-- 當前畫面在class 加active離開後active要拿掉 -->
 			<div class="banner_item banner_item1">
 				<div class="banner_pic">
@@ -120,7 +120,7 @@
 					</div>
 				</div>
 			</div>
-			<!-- banner 03 -->
+			<!-- banner 02 -->
 			<!-- 當前畫面在class 加active離開後active要拿掉 -->
 			<div class="banner_item banner_item2">
 				<div class="banner_txtbox">
@@ -128,7 +128,7 @@
 					關於我們">關於我們</div>
 					<div class="banner_minitxt">
 						在遊戲產業的長久經驗。
-						iCash 以研發為宗旨的企業，總部有約500位員工，各分佈於馬尼拉、新加坡兩地，而其中研發部門、 技術企劃、網管部門是公司的三大核心。
+						iCash 以研發為宗旨的企業，總部有約500位員工，各分佈於馬尼拉、新加坡兩地，而其中研發部門、技術企劃、網管部門是公司的三大核心。
 						每年推出旗艦款的競技遊戲，除了滿足平台的玩家喜好,也讓客戶每年都期待的心情。
 						我們持續在世界各地，並與許多當地的業者建立起長久的合作夥伴關係，以分工合作來創造雙贏的結果。我們的足跡遍佈了歐洲、東南亞、印度等地，而全年超過八千百美元的營收。
 					</div>
@@ -141,8 +141,7 @@
 					<img src="../images/04.png" alt="">
 				</div>
 			</div>
-
-			<!-- banner 04 -->
+			<!-- banner 03 -->
 			<!-- 當前畫面在class 加active離開後active要拿掉 -->
 			<div class="banner_item banner_item3">
 				<div class="banner_pic">
@@ -159,8 +158,7 @@
 					</div>
 				</div>
 			</div>
-
-			<!-- banner 01 -->
+			<!-- banner 04 -->
 			<!-- 當前畫面在class 加active離開後active要拿掉 -->
 			<div class="banner_item banner_item4">
 				<div class="banner_txtbox">
@@ -177,8 +175,7 @@
 					<img class="pic_peopel1" src="../images/pic_peopel1.png" alt="">
 				</div>
 			</div>
-
-			<!-- banner 02 -->
+			<!-- banner 01 -->
 			<!-- 當前畫面在class 加active離開後active要拿掉 -->
 			<div class="banner_item banner_item1">
 				<div class="banner_pic">
@@ -211,9 +208,9 @@
 		
 		<button class="banner_btn prev" id="bannerPrev"></button>
 		<button class="banner_btn next" id="bannerNext"></button>
-		<!-- 目前的頁面 在class 加上 on -->
+		<!-- 目前的頁面 在class 加上 ａｃｔｉｖｅ -->
 		<ul class="banner_dots">
-			<li class="on"></li>
+			<li class="active"></li>
 			<li class=""></li>
 			<li class=""></li>
 			<li class=""></li>
@@ -535,9 +532,9 @@
 				</div>
 			</div>
 
-			<!-- 目前的頁面 在class 加上 on -->
+			<!-- 目前的頁面 在class 加上 active -->
 			<ul class="recruit_dots">
-				<li class="on" @click="change(0)"></li>
+				<li class="active" @click="change(0)"></li>
 				<li @click="change(1)"></li>
 				<li @click="change(2)"></li>
 			</ul>
