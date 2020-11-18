@@ -8,49 +8,50 @@
 	<title>I cash線上平台</title>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../style/reset.css">
-	<link rel="stylesheet" href="../style/animation.css">
-	<link rel="stylesheet" href="../style/index.css">
+	<link rel="stylesheet" href="./style/reset.css">
+	<link rel="stylesheet" href="./style/animation.css">
+	<link rel="stylesheet" href="./style/index.css">
+	<script src="./js/index.js"></script>
 </head>
 
-<body ontouchstart="">
+<body class="unScroll" ontouchstart="" onload="onload();">
 	<!-- 不能滑動 在body 加class="unScroll" -->
 	<!-- 最上列 -->
 	<div class="header">
 		<div class="logo logo_title"></div>
 		<!-- 手機版 打開menu在 .menu_btn + active -->
-		<div class="menu_btn">
+		<div class="menu_btn" id="menu_btn">
 			<i></i>
 		</div>
 		<div class="menu_panel">
-			<ul class="menu">
+			<ul class="menu" id="menu">
 				<li class="logo logo_title"></li>
 				<li>
-					<a href="#hm_1">首頁</a>
+					<a id="menu_btn_hm1" >首頁</a>
 				</li>
 				<li>
-					<a href="#move_about">關於我們</a>
+					<a id="menu_btn_move_about" >關於我們</a>
 				</li>
 				<li>
-					<a href="#hm_2">遊戲產品</a>
+					<a id="menu_btn_hm2" >遊戲產品</a>
 				</li>
 				<li>
-					<a href="#hm_3">服務項目</a>
+					<a id="menu_btn_hm3" >服務項目</a>
 				</li>
 				<li>
-					<a href="#hm_4">合作夥伴</a>
+					<a id="menu_btn_hm4" ">合作夥伴</a>
 				</li>
 				<li>
-					<a href="#hm_6">聯絡我們</a>
+					<a id="menu_btn_hm6" >聯絡我們</a>
 				</li>
 				<li style="display: none">登入</li>
-				<!-- 打開第二層選單，在class 加 active -->
-				<li class="lang">
+				<!-- 打開第二層選單，在class 加 on -->
+				<li id="menu_btn_langx" class="lang">
 					<span class="lang_txtbox">
-						<tt class="lang_title">語系</tt>
-						<tt class="lang_txt">繁體中文</tt>
+						<tt id="lang_title" class="lang_title">語系</tt>
+						<tt id="lang_txt" class="lang_txt">繁體中文</tt>
 					</span>
-					<ul class="second_menu">
+					<ul id="second_menu" class="second_menu">
 						<li class="active">繁體中文</li>
 						<li>簡體</li>
 						<li>English</li>
@@ -89,10 +90,10 @@
 
 	<!-- banner -->
 	<div id="move_about" class="banner">
-		<div class="banner_group">
+		<div class="banner_group" id="banner_group">
 			<!-- banner 01 -->
 			<!-- 當前畫面在class 加active離開後active要拿掉 -->
-			<div class="banner_item banner_item1">
+			<div class="banner_item banner_item1" id="banner_item1">
 				<div class="banner_pic">
 					<img class="pic_cell1" src="../images/pic_cell1.png" alt="">
 					<img class="pic_cell2" src="../images/pic_cell2.png" alt="">
@@ -122,7 +123,7 @@
 			</div>
 			<!-- banner 02 -->
 			<!-- 當前畫面在class 加active離開後active要拿掉 -->
-			<div class="banner_item banner_item2">
+			<div class="banner_item banner_item2" id="banner_item2">
 				<div class="banner_txtbox">
 					<div class="banner_bigtxt" data-title="
 					關於我們">關於我們</div>
@@ -143,7 +144,7 @@
 			</div>
 			<!-- banner 03 -->
 			<!-- 當前畫面在class 加active離開後active要拿掉 -->
-			<div class="banner_item banner_item3">
+			<div class="banner_item banner_item3" id="banner_item3">
 				<div class="banner_pic">
 					<img class="pic_cell03" src="../images/pic_cell03.png" alt="">
 					<img class="pic_cell02" src="../images/pic_cell02.png" alt="">
@@ -160,7 +161,7 @@
 			</div>
 			<!-- banner 04 -->
 			<!-- 當前畫面在class 加active離開後active要拿掉 -->
-			<div class="banner_item banner_item4">
+			<div class="banner_item banner_item4" id="banner_item4">
 				<div class="banner_txtbox">
 					<div class="banner_bigtxt" data-title="夥伴與忠誠的關係">夥伴與忠誠的關係</div>
 					<div class="banner_minitxt">
@@ -177,7 +178,7 @@
 			</div>
 			<!-- banner 01 -->
 			<!-- 當前畫面在class 加active離開後active要拿掉 -->
-			<div class="banner_item banner_item1">
+			<div class="banner_item banner_item1" id="banner_item5">
 				<div class="banner_pic">
 					<img class="pic_cell1" src="../images/pic_cell1.png" alt="">
 					<img class="pic_cell2" src="../images/pic_cell2.png" alt="">
@@ -208,9 +209,9 @@
 		
 		<button class="banner_btn prev" id="bannerPrev"></button>
 		<button class="banner_btn next" id="bannerNext"></button>
-		<!-- 目前的頁面 在class 加上 ａｃｔｉｖｅ -->
-		<ul class="banner_dots">
-			<li class="active"></li>
+		<!-- 目前的頁面 在class 加上 on -->
+		<ul class="banner_dots" id="banner_dots">
+			<li class="on"></li>
 			<li class=""></li>
 			<li class=""></li>
 			<li class=""></li>
@@ -497,12 +498,12 @@
 			<!-- 粒子動畫 -->
 			<div class="txtbox">
 				<div class="mod_bigtxt txt_shadow">Recruitment</div>
-				<div class="mod_midtxt txt_shadow">人才招募</div>
+				<div class="mod_bigtxt txt_shadow">人才招募</div>
 			</div>
 		</div>
 		<div class="recruit_r">
 			<!-- 上下滑  transform: translateY(0 ~ -200%)-->
-			<div class="recruit_group">
+			<div class="recruit_group" id="recruit_group">
 				<div class="recruit_item active"> 
 					<div class="sop">軟體開發</div>
 					<div class="recruit_txt mod_minitxt">
@@ -532,9 +533,9 @@
 				</div>
 			</div>
 
-			<!-- 目前的頁面 在class 加上 active -->
-			<ul class="recruit_dots">
-				<li class="active" @click="change(0)"></li>
+			<!-- 目前的頁面 在class 加上 on -->
+			<ul class="recruit_dots" id="recruit_dots">
+				<li class="on" @click="change(0)"></li>
 				<li @click="change(1)"></li>
 				<li @click="change(2)"></li>
 			</ul>
@@ -596,25 +597,44 @@
 		</div>
 		<div class="input_box">
 			<div class="input_box_l">
-				<input type="text" class="inp_txt" placeholder="Name">
-				<label class="inp_txt mod_select">
+				<input type="text" class="inp_move inp_txt" placeholder="Name">
+				<label class="inp_move inp_txt mod_select">
 					<select >
 						<option>Country</option>
 						<option>Taipei</option>
 					</select>
 				</label>
-				<input type="text" class="inp_txt" placeholder="E-mail">
-				<input type="text" class="inp_txt" placeholder="Tel">
-				<input type="text" class="inp_txt" placeholder="Messenger ID">
+				<input type="text" class="inp_move inp_txt" placeholder="E-mail">
+				<div class="inp_move inp_group">
+					<label class="inp_txt mod_select">
+						<select >
+							<option>+886</option>
+							<option>+82</option>
+							<option>+55</option>
+						</select>
+					</label>
+					<input type="text" class="inp_txt" placeholder="Tel">
+				</div>
+				<div class="inp_move inp_group">
+					<label class="inp_txt mod_select">
+						<select >
+							<option>WeChat</option>
+							<option>QQ</option>
+							<option>line</option>
+						</select>
+					</label>
+					<input type="text" class="inp_txt" placeholder="Messenger ID">
+				</div>
+				
 			</div>
 			<div class="input_box_r">
-				<label class="inp_txt mod_select">
+				<label class="inp_move inp_txt mod_select">
 					<select >
 						<option>Gaming Interested</option>
 					</select>
 				</label>
-				<input type="text" class="inp_txt" placeholder="Subject">
-				<textarea type="text" class="inp_txt higger" placeholder="Content"></textarea>
+				<input type="text" class="inp_move inp_txt" placeholder="Subject">
+				<textarea type="text" class="inp_move inp_txt higger" placeholder="Content"></textarea>
 			</div>
 			<button class="submit_btn">SEND</button>
 		</div>
@@ -634,14 +654,14 @@
 		<div class="circle_mask">
 			<div class="loading">
 				<div class="logo"></div>
-				<div class="load_num"><tt>100</tt> %</div>
-				<div class="loading_box">
+				<div class="load_num"><tt id="loadPercentNum">0</tt> %</div>
+				<div class="loading_box" id ="loading_box">
 					<div class="loading_bar">
 						<!-- 控制跑條 left:0~100% -->
-						<span style="left: 99%;"></span>
+						<span style="left: 0%;"></span>
 					</div>
 					<!-- 控制圓亮點 left:0~100% -->
-					<span class="light_ball" style="left: 99%;"></span>
+					<span class="light_ball" id="light_ball" style="left: 0%;"></span>
 				</div>
 
 			</div>
@@ -676,10 +696,6 @@
 			</div>
 		</div>
 	</div>
-
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'></script>
-	<script src="../script/index.js"></script>
-
 </body>
 
 </html>

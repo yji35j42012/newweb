@@ -975,17 +975,13 @@
 	box-shadow: 0px 0px 2px 1px #ffc902, 0px 0px 4px 3px #ebd279;
 }
 
-.fire1 .punt {
-	animation-delay: 1s;
-}
+
 .fire2 .punt {
-	animation-delay: 3.5s;
+	animation-delay: 4s;
 }
-.fire3 .punt {
-	animation-delay: 13s;
-}
+
 .fire4 .punt {
-	animation-delay: 5s;
+	animation-delay: 4s;
 	
 }
 /* animation-play-state: paused; */
@@ -1019,8 +1015,6 @@
 	}
 
 }
-
-
 
 .punt:nth-child(1) {
 	animation-name: explode1;
@@ -1117,151 +1111,151 @@
 .punt:nth-child(24) {
 	animation-name: explode24;
 }
-
+/* 
 .fire2 .punt:nth-child(1),
-.fire3 .punt:nth-child(1) {
+.fire4 .punt:nth-child(1) {
 	animation-duration: 6s;
 	animation-name: explode25;
 }
   
 .fire2 .punt:nth-child(2),
-.fire3 .punt:nth-child(2) {
+.fire4 .punt:nth-child(2) {
 	animation-duration: 6s;
 	animation-name: explode26;
 }
   
 .fire2 .punt:nth-child(3),
-.fire3 .punt:nth-child(3) {
+.fire4 .punt:nth-child(3) {
 	animation-duration: 6s;
 	animation-name: explode27;
 }
   
 .fire2 .punt:nth-child(4),
-.fire3 .punt:nth-child(4) {
+.fire4 .punt:nth-child(4) {
 	animation-duration: 6s;
 	animation-name: explode28;
 }
   
 .fire2 .punt:nth-child(5),
-.fire3 .punt:nth-child(5) {
+.fire4 .punt:nth-child(5) {
 	animation-duration: 6s;
 	animation-name: explode29;
 }
   
 .fire2 .punt:nth-child(6),
-.fire3 .punt:nth-child(6) {
+.fire4 .punt:nth-child(6) {
 	animation-duration: 6s;
 	animation-name: explode30;
 }
   
 .fire2 .punt:nth-child(7),
-.fire3 .punt:nth-child(7) {
+.fire4 .punt:nth-child(7) {
 	animation-duration: 6s;
 	animation-name: explode31;
 }
   
 .fire2 .punt:nth-child(8),
-.fire3 .punt:nth-child(8) {
+.fire4 .punt:nth-child(8) {
 	animation-duration: 6s;
 	animation-name: explode32;
 }
   
 .fire2 .punt:nth-child(9),
-.fire3 .punt:nth-child(9) {
+.fire4 .punt:nth-child(9) {
 	animation-duration: 6s;
 	animation-name: explode33;
 }
   
 .fire2 .punt:nth-child(10),
-.fire3 .punt:nth-child(10) {
+.fire4 .punt:nth-child(10) {
 	animation-duration: 6s;
 	animation-name: explode34;
 }
   
 .fire2 .punt:nth-child(11),
-.fire3 .punt:nth-child(11) {
+.fire4 .punt:nth-child(11) {
 	animation-duration: 6s;
 	animation-name: explode35;
 }
   
 .fire2 .punt:nth-child(12),
-.fire3 .punt:nth-child(12) {
+.fire4 .punt:nth-child(12) {
 	animation-duration: 6s;
 	animation-name: explode36;
 }
   
 .fire2 .punt:nth-child(13),
-.fire3 .punt:nth-child(13) {
+.fire4 .punt:nth-child(13) {
 	animation-duration: 6s;
 	animation-name: explode37;
 }
   
 .fire2 .punt:nth-child(14),
-.fire3 .punt:nth-child(14) {
+.fire4 .punt:nth-child(14) {
 	animation-duration: 6s;
 	animation-name: explode38;
 }
   
 .fire2 .punt:nth-child(15),
-.fire3 .punt:nth-child(15) {
+.fire4 .punt:nth-child(15) {
 	animation-duration: 6s;
 	animation-name: explode39;
 }
   
 .fire2 .punt:nth-child(16),
-.fire3 .punt:nth-child(16) {
+.fire4 .punt:nth-child(16) {
 	animation-duration: 6s;
 	animation-name: explode40;
 }
   
 .fire2 .punt:nth-child(17),
-.fire3 .punt:nth-child(17) {
+.fire4 .punt:nth-child(17) {
 	animation-duration: 6s;
 	animation-name: explode41;
 }
   
 .fire2 .punt:nth-child(18),
-.fire3 .punt:nth-child(18) {
+.fire4 .punt:nth-child(18) {
 	animation-duration: 6s;
 	animation-name: explode42;
 }
   
 .fire2 .punt:nth-child(19),
-.fire3 .punt:nth-child(19) {
+.fire4 .punt:nth-child(19) {
 	animation-duration: 6s;
 	animation-name: explode43;
 }
   
 .fire2 .punt:nth-child(20),
-.fire3 .punt:nth-child(20) {
+.fire4 .punt:nth-child(20) {
 	animation-duration: 6s;
 	animation-name: explode44;
 }
   
 .fire2 .punt:nth-child(21),
-.fire3 .punt:nth-child(21) {
+.fire4 .punt:nth-child(21) {
 	animation-duration: 6s;
 	animation-name: explode45;
 }
   
 .fire2 .punt:nth-child(22),
-.fire3 .punt:nth-child(22) {
+.fire4 .punt:nth-child(22) {
 	animation-duration: 6s;
 	animation-name: explode46;
 }
   
 .fire2 .punt:nth-child(23),
-.fire3 .punt:nth-child(23) {
+.fire4 .punt:nth-child(23) {
 	animation-duration: 6s;
 	animation-name: explode47;
-}
+} */
   
-.fire2 .punt:nth-child(24),
-.fire3 .punt:nth-child(24) {
+/* .fire2 .punt:nth-child(24),
+.fire4 .punt:nth-child(24) {
 	animation-duration: 6s;
 	animation-name: explode48;
 }
-  
+   */
 
 
 @keyframes explode1 {
