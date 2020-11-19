@@ -3,6 +3,7 @@ function onload() {
 	var barTime = setInterval(function () {
 		barPercent += 1;
 		document.getElementById("light_ball").style.left = barPercent + "%";
+		document.getElementById("light_bar").style.left = barPercent + "%";
 		var now = parseInt(barPercent);
 		document.getElementById("loadPercentNum").innerHTML = now;
 		if (now >= 100) {
@@ -23,12 +24,14 @@ function onload() {
 	setScollEvent();
 	setBannerMouseEvent();
 	activeBanner();
+	setRecruitMouseEvent();
 	goPlayRecruit();
 	setupMenu();
 }
 
 var bannePlay = true;
 var banneStart = null;
+var banneRecruitStart = null;
 
 var totalPageHeight = 0;
 var divScrollEventAry = new Array();
@@ -155,6 +158,7 @@ function setBannerMouseEvent() {
 
 	bannerPrev.onclick = function () {
 		var banner_dots = document.getElementById("banner_dots");
+		var bannerDotLength = banner_dots.children.length;
 		nowDot < 1 ? nowDot = 3 : nowDot--;
 		removeAllBannerDot(banner_dots);
 		if (nowDot > 0 && nowDot <= bannerDotLength - 1) {
@@ -168,6 +172,7 @@ function setBannerMouseEvent() {
 	};
 	bannerNext.onclick = function () {
 		var banner_dots = document.getElementById("banner_dots");
+		var bannerDotLength = banner_dots.children.length;
 		nowDot == bannerDotLength - 1 ? nowDot = 0 : nowDot++;
 		removeAllBannerDot(banner_dots);
 		if (nowDot > 0 && nowDot <= bannerDotLength - 1) {
@@ -181,7 +186,6 @@ function setBannerMouseEvent() {
 }
 
 function activeBanner() {
-	bannerDotLength = document.getElementById("banner_dots").children.length;
 	var banner_group = document.getElementById("banner_group");
 	banner_group.classList.add('active');
 	if (bannePlay) {
@@ -190,10 +194,11 @@ function activeBanner() {
 }
 
 var nowDot = 0;
-var bannerDotLength = 0;
+var nowRecruitDot = 0;
 
 function goPlayBanner() {
 	var banner_dots = document.getElementById("banner_dots");
+	var bannerDotLength = banner_dots.children.length;
 	if (bannePlay) {
 		if (banneStart != null) {
 			clearInterval(banneStart);
@@ -203,10 +208,11 @@ function goPlayBanner() {
 			removeAllBannerDot(banner_dots);
 			if (nowDot > 0 && nowDot <= bannerDotLength - 1) {
 				action_1();
-			} else {
+			} else if (nowDot == 0) {
+				nowDot = 4;
 				action_2();
 			}
-		}, 13000);
+		}, 3000);
 	}
 }
 
@@ -234,6 +240,7 @@ function activeBannerDot(dotsElem, index) {
 
 function bannerDotClick(event) {
 	var banner_dots = document.getElementById("banner_dots");
+	var bannerDotLength = banner_dots.children.length;
 	var index = 0;		//0~3
 	for (var i = 0; i < event.target.parentElement.children.length; i++) {
 		if (event.target.parentElement.children[i] == event.target) {
@@ -261,12 +268,6 @@ function bannerDotClick(event) {
 }
 
 // ====== 函式區塊 ======
-// function goTransform(page, time) {
-// 	var banner_group = document.getElementById("banner_group");
-// 	// console.log("click" + page);
-// 	banner_group.style = "transform:translateX(-" + page * 100 + "%); transition:" + time + "s";
-// }
-
 function goTransform(bannerGroupElem, direct, page, time) {
 	if (bannerGroupElem != null && (direct == "X" || direct == "Y")) {
 		var banner_group = bannerGroupElem;
@@ -309,28 +310,53 @@ function action_2() {
 	activeBannerDot(banner_dots, 0);
 }
 
-
-
-
-var recruitTime = 0
+var nowRecruitDot = 0
 function goPlayRecruit() {
-	setInterval(function () {
-		var banner_dots = document.getElementById("recruit_dots");
-		var recruit_group = document.getElementById("recruit_group");
-		recruitTime == 3 ? recruitTime = 0 : recruitTime++;
-		removeAllBannerDot(banner_dots);
-		if (recruitTime < 3) {
-			goTransform(recruit_group, "Y", recruitTime, 1);
-			activeBannerDot(banner_dots, recruitTime);
-		} else if (recruitTime == 3) {
-			goTransform(recruit_group, "Y", recruitTime, 1)
-			activeBannerDot(banner_dots, 0);
-			setTimeout(() => {
-				recruitTime = 0;
-				goTransform(recruit_group, "Y", recruitTime, 0);
-			}, 1000);
-		}
-
-	},10000);
+	if(banneRecruitStart != null){
+		clearInterval(banneRecruitStart);
+		banneRecruitStart = null;
+	}
+	banneRecruitStart = setInterval(function () {
+		nowRecruitDot == 3 ? nowRecruitDot = 0 : nowRecruitDot++;
+		execRecruit();
+	}, 2000);
 }
 
+function execRecruit(){
+	var banner_dots = document.getElementById("recruit_dots");
+	var bannerDotLength = banner_dots.children.length;
+	removeAllBannerDot(banner_dots);
+	if (nowRecruitDot < bannerDotLength) {
+		goTransform(recruit_group, "Y", nowRecruitDot, 1);
+		activeBannerDot(banner_dots, nowRecruitDot);
+	} else if (nowRecruitDot == bannerDotLength) {
+		goTransform(recruit_group, "Y", nowRecruitDot, 1)
+		activeBannerDot(banner_dots, 0);
+		setTimeout(() => {
+			nowRecruitDot = 0;
+			goTransform(recruit_group, "Y", nowRecruitDot, 0);
+		}, 1000);
+	}
+}
+
+function recruitDotClick(event) {
+	var banner_dots = document.getElementById("recruit_dots");
+	var bannerDotLength = banner_dots.children.length;
+	var index = 0;		//0~3
+	for (var i = 0; i < event.target.parentElement.children.length; i++) {
+		if (event.target.parentElement.children[i] == event.target) {
+			index = i;
+		}
+	}
+	nowRecruitDot = index;
+	execRecruit();
+	goPlayRecruit();
+}
+
+function setRecruitMouseEvent() {
+	var banner_dots = document.getElementById("recruit_dots");
+	var bannerDotLength = banner_dots.children.length;
+	for (var i = 0; i < bannerDotLength; i++) {
+		banner_dots.children[i].onclick = function (elem) { recruitDotClick(elem) };
+	}
+}
