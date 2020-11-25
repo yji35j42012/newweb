@@ -1,0 +1,45 @@
+body{
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+.mod_font_en{
+	font-family: 'Abril Fatface', cursive;
+}
+.mod_bigtxt {
+	font-size: 53px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.mod_midtxt {
+	position: relative;
+	font-size:36px;
+	font-weight: bold;
+}
+.mod_minitxt {
+	position: relative;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: justify;
+}
+.txt_shadow{text-shadow: 1px 0px #000, 1px 1px 1px #000;}
+[class*="_btn"]:not(:disabled),
+.second_menu li{cursor: pointer;}
+.gradient {
+	position: relative;
+	color: transparent;
+    text-shadow: 1px 0px #000, 1px 1px 1px #000;
+    
+    &::before{
+        position: absolute;
+        content: attr(data-title);
+        background: linear-gradient(135deg,  rgba(255,255,195,1) 40%,rgba(240,213,122,1) 83%,rgba(204,148,92,1) 100%);
+        text-shadow: none;
+        -webkit-background-clip: text;
+    }
+}
+.unScroll{
+	/* 沒有fixed 在iphone overflow 失效 */
+	position: fixed;
+	overflow: hidden;
+}
