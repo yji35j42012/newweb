@@ -92,6 +92,11 @@ function setupMenu() {
 		menu_btn.classList.remove("active");
 		scrollTo(document.getElementById("hm_6").offsetTop);
 	};
+	document.getElementById("businese_btn").onclick = function () {
+		scrollTo(document.getElementById("hm_4").offsetTop);
+	};
+
+	
 }
 function scrollTo(offset) {
 	document.body.scrollTop = offset;
@@ -212,7 +217,7 @@ function goPlayBanner() {
 				nowDot = 4;
 				action_2();
 			}
-		}, 3000);
+		}, 6000);
 	}
 }
 
