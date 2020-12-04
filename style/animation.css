@@ -18,6 +18,7 @@
 	-webkit-animation: cloudLoop 15s linear infinite;
 	animation: cloudLoop 15s linear infinite;
 	opacity: 0;
+	transform:translateZ(0);
 }
 @keyframes cloudLoop {
 	0% {
@@ -61,7 +62,7 @@
 	-webkit-transition-timing-function: linear;
 	transition-timing-function: linear;
 	opacity: 0;
-
+	transform:translateZ(0);
 }
 @media (max-width: 576px){
 	.bg_bubbles li {
@@ -211,6 +212,7 @@
 	background-color: #ffffff;
 	box-shadow: 0px 0px 2px 1px #ffc902, 0px 0px 4px 3px #ebd279;
 	opacity: 0;
+	transform:translateZ(0);
 }
 .bg_bubbles_in_out li:nth-child(1) {
 	left: 42%;
@@ -242,7 +244,6 @@
 	-webkit-animation-delay: 2s;
 	animation-delay: 2s;
 }
-
 .bg_bubbles_in_out li:nth-child(5) {
 	left: 53%;
 	top: 15%;
@@ -263,7 +264,6 @@
 	-webkit-animation-delay: 3s;
 	animation-delay: 3s;
 }
-
 .bg_bubbles_in_out li:nth-child(7) {
 	left: 41%;
 	top: 24%;
@@ -274,7 +274,6 @@
 	-webkit-animation-delay: 1.5s;
 	animation-delay: 1.5s;
 }
-
 .bg_bubbles_in_out li:nth-child(8) {
 	left: 55%;
 	top: 32%;
@@ -334,7 +333,6 @@
 	-webkit-animation-delay: 2s;
 	animation-delay: 2s;
 }
-
 .bg_bubbles_in_out li:nth-child(15) {
 	top: 15%;
 	left: 35%;
@@ -355,7 +353,6 @@
 	-webkit-animation-delay: 3s;
 	animation-delay: 3s;
 }
-
 .bg_bubbles_in_out li:nth-child(17) {
 	left: 70%;
 	top: 2%;
@@ -366,7 +363,6 @@
 	-webkit-animation-delay: 1.5s;
 	animation-delay: 1.5s;
 }
-
 .bg_bubbles_in_out li:nth-child(18) {
 	left: 5%;
 	top: 3%;
@@ -612,6 +608,7 @@
 .active .bg_triangle_in_out:after{
 	-webkit-animation-play-state: running;
 	animation-play-state: running;
+	transform:translateZ(0);
 }
 @media only screen and (max-width: 1023px) {
 	.bg_triangle_in_out:after{
@@ -624,6 +621,7 @@
 /* 圖片本身浮動 */
 .right_left_move{
 	animation: right-left-move 12s -2s infinite alternate both;
+	transform:translateZ(0);
 }
 @-webkit-keyframes right-left-move{
 	0% {
@@ -663,6 +661,7 @@
 }
 .left_right_move{
 	animation: left-right-move 12s -2s infinite alternate both;
+	transform:translateZ(0);
 }
 @-webkit-keyframes left-right-move{
 	0% {
@@ -702,6 +701,7 @@
 }
 .up_down_move{
 	animation: up-down-move 12s -2s infinite alternate both;
+	transform:translateZ(0);
 }
 @-webkit-keyframes up-down-move{
 	0% {
@@ -760,6 +760,7 @@
 	bottom: 0;
 	left: -20%;
 	margin: auto 0;
+	transform:translateZ(0);
 }
 .light span::before{
 	content:"";
@@ -771,6 +772,7 @@
 	box-shadow: 0 0 0px 1px rgba(51, 51, 51, .1), 0 0 1px 1px rgba(51, 51, 51, .1);
 	transform: scaleY(1.3) perspective(.5em) rotateX(5deg);
 	opacity: .6;
+	transform:translateZ(0);
 }
 .light span::after{
 	content:"";
@@ -781,6 +783,7 @@
 	background: linear-gradient(180deg, rgba(255, 255, 255, .1) 0%, rgba(255, 207, 169, .1) 50%, rgba(0, 0, 0, .1) 90%);
 	box-shadow: 0 0 0px 1px rgba(51, 51, 51, .1), 0 0 1px 1px rgba(51, 51, 51, .1);
 	transform: scaleY(1.3) perspective(.5em) rotateX(5deg);
+	transform:translateZ(0);
 }
 .light .light1{
 	animation: light 10s infinite alternate;
@@ -906,6 +909,7 @@
 	position: absolute;
 	width: 200px;
 	height: 400px;
+	transform:translateZ(0);
 }
 .fire1 {
 	top: 50px;
@@ -940,6 +944,7 @@
 	animation-iteration-count: infinite;
 	background-color: #ffffff;
 	box-shadow: 0px 0px 2px 1px #ffc902, 0px 0px 4px 3px #ebd279;
+	transform:translateZ(0);
 }
 
 
