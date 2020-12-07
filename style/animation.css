@@ -17,7 +17,7 @@
 	background:  url('../images/clouds.png')repeat-x center/cover;
 	-webkit-animation: cloudLoop 15s linear infinite;
 	animation: cloudLoop 15s linear infinite;
-	opacity: 0;ㄈ
+	opacity: 0;
 }
 @keyframes cloudLoop {
 	0% {
